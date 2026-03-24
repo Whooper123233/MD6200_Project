@@ -25,6 +25,7 @@ public class Controller2D : RaycastController
     public override void Start()
     {
         base.Start();
+        collsionInfo.faceDir = 1;
     }
     public void Move(Vector3 velocity )
     {
@@ -36,8 +37,10 @@ public class Controller2D : RaycastController
         }
         if(velocity.x != 0)
         {
-            HorizontalCollisions( ref velocity );
+            collsionInfo.faceDir = (int)Mathf.Sign(velocity.x);
         }
+        HorizontalCollisions( ref velocity );
+
         if (velocity.y != 0)
         {
             VerticalCollisions( ref velocity );
@@ -47,9 +50,13 @@ public class Controller2D : RaycastController
     }
     void HorizontalCollisions(ref Vector3 velocity)
     {
-        float dirX = Mathf.Sign(velocity.x);
+        float dirX = collsionInfo.faceDir;
         float rayLength = Mathf.Abs(velocity.x) + skinWidth;
 
+        if(Mathf.Abs(velocity.x) < skinWidth)
+        {
+            rayLength = 2 * skinWidth;
+        }
         for (int i = 0; i < verticalRayCount; i++)
         {
             Vector2 rayOrigin = (dirX == -1) ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight;
@@ -182,7 +189,7 @@ public class Controller2D : RaycastController
         public float slopAngle;
         public float originSlopAngle;
         public bool descendingSlope;
-      
+        public int faceDir;
         public void Reset()
         {
             above = below = false;

@@ -2,6 +2,7 @@
   "dependencies": {
     "com.unity.2d.animation": "13.0.4",
     "com.unity.burst": "1.8.28",
+    "com.unity.cinemachine": "3.1.6",
     "com.unity.collab-proxy": "2.10.2",
     "com.unity.feature.2d": "2.0.2",
     "com.unity.ide.visualstudio": "2.0.27",
