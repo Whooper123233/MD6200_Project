@@ -22,6 +22,10 @@ public class Controller2D : RaycastController
     public float maxDecendAngle = 75;
 
     public CollisionInfo collsionInfo;
+    public LayerMask hazardMask;
+
+    public Transform respawnPoint;
+
     public override void Start()
     {
         base.Start();
@@ -61,8 +65,8 @@ public class Controller2D : RaycastController
         {
             Vector2 rayOrigin = (dirX == -1) ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight;
             rayOrigin += Vector2.up * (horizontalRaySpacing * i );
-            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * dirX, rayLength, collisionMask);
 
+            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * dirX, rayLength, collisionMask);
             Debug.DrawRay(rayOrigin, Vector2.right * dirX * rayLength, Color.red);
             if (hit)
             {
@@ -91,6 +95,8 @@ public class Controller2D : RaycastController
                     collsionInfo.right = dirX == 1;
                 }
             }
+            CheckHazard(rayOrigin, Vector2.right * dirX, rayLength);
+
         }
     }
     void VerticalCollisions(ref Vector3 velocity)
@@ -102,8 +108,8 @@ public class Controller2D : RaycastController
         {
             Vector2 rayOrigin = (dirY == -1 ) ? raycastOrigins.bottomLeft : raycastOrigins.topLeft;
             rayOrigin += Vector2.right * (verticalRaySpacing * i + velocity.x);
-            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * dirY, rayLength, collisionMask);
 
+            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * dirY, rayLength, collisionMask);
             Debug.DrawRay(rayOrigin, Vector2.up * dirY * rayLength, Color.red);
             if (hit)
             {
@@ -118,6 +124,7 @@ public class Controller2D : RaycastController
                 collsionInfo.below = dirY == -1;
                 collsionInfo.above = dirY == 1;
             }
+            CheckHazard(rayOrigin, Vector2.up * dirY, rayLength);
         }
         if (collsionInfo.climbingSlop)
         {
@@ -136,6 +143,7 @@ public class Controller2D : RaycastController
                 }
             }
         }
+
     }
     void ClimbSlope(ref Vector3 velocity, float slopeAngle)
     {
@@ -179,7 +187,22 @@ public class Controller2D : RaycastController
         }
     }
 
-
+    private void CheckHazard(Vector2 origin, Vector2 direction, float length)
+    {
+        RaycastHit2D hazardHit = Physics2D.Raycast(origin, direction, length, hazardMask);
+        if (hazardHit)
+        {
+            Debug.Log("Hit spike!");
+            if (respawnPoint != null)
+            {
+                transform.position = respawnPoint.position;
+            }
+            else
+            {
+                Debug.LogWarning("Respawn point not assigned!");
+            }
+        }
+    }
 
     public struct CollisionInfo
     {
