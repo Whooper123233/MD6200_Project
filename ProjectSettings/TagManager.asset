@@ -41,14 +41,29 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: ForeGround
-    uniqueID: 1083438751
+  - name: BG1
+    uniqueID: 2056316401
+    locked: 0
+  - name: BG2
+    uniqueID: 1998660375
+    locked: 0
+  - name: BG3
+    uniqueID: 2493052693
+    locked: 0
+  - name: BG4
+    uniqueID: 2716125423
+    locked: 0
+  - name: BG5
+    uniqueID: 136925655
+    locked: 0
+  - name: Platforme
+    uniqueID: 3062166593
     locked: 0
   - name: Player
     uniqueID: 748895271
     locked: 0
-  - name: BackGround
-    uniqueID: 2056316401
+  - name: ForeGround
+    uniqueID: 1083438751
     locked: 0
   m_RenderingLayers:
   - Default
