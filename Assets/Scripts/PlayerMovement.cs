@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
     float maxJumpVelocity;
     float minJumpVelocity;
-    private Vector3 _velocity;
+    public Vector3 _velocity;
     float targetVelocityX;
     float velocityXSmoothing;
 
@@ -65,31 +65,23 @@ public class PlayerMovement : MonoBehaviour
     private bool _hasDashed;
 
     [Header("Grapple")]
-    [SerializeField] private float grappleRange = 10f;
-    [SerializeField] private float grappleSpeed = 10f;
-    [SerializeField] private LayerMask grappleMask;
-    private bool _isGrappling;
-    private Vector2 _grapplePoint;
-    private float _ropeLength;
-
-    [Header("LineRenderer (Grapple Visual)")]
-    [SerializeField] private LineRenderer grappleLine;
+    public GrappleSwing grapple;
     public Controller2D controller;
+
+
     void Start()
     {
+        
         controller = GetComponent<Controller2D>();
         gravity = -(2 * maxJumpHeight) / Mathf.Pow(timeToJumpApex, 2);
         maxJumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
         minJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(gravity) * minJumpHeight);
 
-        //if (grappleLine == null)
-        //    grappleLine = GetComponent<LineRenderer>();
-        //if (grappleLine != null)
-        //    grappleLine.enabled = false;
     }
 
     void Update()
     {
+
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         int wallDirX = (controller.collsionInfo.left) ? -1 : 1;
 
@@ -97,8 +89,10 @@ public class PlayerMovement : MonoBehaviour
         HorizontalMovement(input, wallDirX);
         WallSliding(input, wallDirX);
         Jumping();
-        Gravity();
-
+        if (!grapple.isSwinging)
+        {          
+            Gravity();
+        }
         controller.Move(_velocity * Time.deltaTime);
         StopBouncing();
     }
@@ -133,8 +127,7 @@ public class PlayerMovement : MonoBehaviour
     void HorizontalMovement(Vector2 input, int wallDirX)
     {
         float targetVelocityX = input.x * moveSpeed;
-        _velocity.x = Mathf.SmoothDamp(_velocity.x, targetVelocityX, ref velocityXSmoothing,
-            (controller.collsionInfo.below) ? accerlationTimeGrounded : accerlationTimeAir);
+        _velocity.x = Mathf.SmoothDamp(_velocity.x, targetVelocityX, ref velocityXSmoothing,(controller.collsionInfo.below) ? accerlationTimeGrounded : accerlationTimeAir);
     }
 
     void WallSliding(Vector2 input, int wallDirX)
@@ -218,7 +211,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Gravity()
-    {
+    {    
         _velocity.y += gravity * Time.deltaTime;
     }
 
@@ -228,22 +221,4 @@ public class PlayerMovement : MonoBehaviour
         if (controller.collsionInfo.below && _velocity.y < 0) _velocity.y = 0;
     }
 
-    //void OnDrawGizmos()
-    //{
-    //    if (!Application.isPlaying) return;
-
-    //    Vector3 mouseScreenPos = Input.mousePosition;
-    //    mouseScreenPos.z = Mathf.Abs(Camera.main.transform.position.z - transform.position.z);
-    //    Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
-
-    //    Vector3 playerPos = transform.position;
-    //    Gizmos.color = Color.green;
-    //    Gizmos.DrawLine(playerPos, mouseWorldPos);
-
-    //    Gizmos.color = Color.yellow;
-    //    Gizmos.DrawWireSphere(mouseWorldPos, 0.2f);
-
-    //    Gizmos.color = Color.cyan;
-    //    Gizmos.DrawWireSphere(playerPos, grappleRange);
-    //}
 }
