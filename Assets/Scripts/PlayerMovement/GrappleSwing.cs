@@ -20,6 +20,8 @@ public class GrappleSwing : MonoBehaviour
     private Rigidbody2D rb;
     public Controller2D controllerScript;
     public PlayerMovement playerMovement;
+    [SerializeField]public GrappleArea grappleArea;
+
 
     void Start()
     {
@@ -27,49 +29,54 @@ public class GrappleSwing : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-
         if (!isSwinging)
         {
             Destroy(webJoint);
             ClearWebLine();
-            isSwinging = false;
             rb.linearDamping = 0f;
         }
-        HandleWebShooting();
-        HandleSwinging();
+
+        HandleLanding();
         HandleWebRelease();
+
+        if (grappleArea.canSwing || isSwinging)
+        {
+            HandleWebShooting();
+            HandleSwinging();
+        }
+
+    }
+    void HandleLanding()
+    {
+        if (controllerScript.collsionInfo.below)
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
     }
 
     void HandleWebShooting()
     {
         if (controllerScript.collsionInfo.below || isSwinging)
-        {
             return;
-        }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && grappleArea.canSwing)
         {
-            Vector2 aimDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - webOrigin.position;
-            RaycastHit2D hit = Physics2D.Raycast(webOrigin.position, aimDirection.normalized, maxWebDistance, AttachableLayers);
+            Vector2 attachPoint = grappleArea.GetAttachPoint();
 
-            if (hit.collider != null)
-            {
-                float distanceToTarget = Vector2.Distance(webOrigin.position, hit.point);
+            float distanceToTarget = Vector2.Distance(webOrigin.position, attachPoint);
 
-                if (distanceToTarget < minWebDistance)
-                {
-                    return;
-                }
+            if (distanceToTarget < minWebDistance || distanceToTarget > maxWebDistance)
+                return;
 
-                webAttachPoint = hit.point;
-                AttachWeb(webAttachPoint);
-                DrawWebLine();
-                isSwinging = true;
-                rb.linearDamping = 0.5f;
-            }
+            webAttachPoint = attachPoint;
+
+            AttachWeb(webAttachPoint);
+            DrawWebLine();
+
+            isSwinging = true;
+            rb.linearDamping = 0.5f;
         }
     }
     void AttachWeb(Vector2 attachPoint)
@@ -99,12 +106,12 @@ public class GrappleSwing : MonoBehaviour
             storedVelocity = rb.linearVelocity;
 
             Destroy(webJoint);
-            rb.bodyType = RigidbodyType2D.Kinematic;
             ClearWebLine();
             isSwinging = false;
             rb.linearDamping = 0f;
 
             ApplyReleaseJump();
+            rb.bodyType = RigidbodyType2D.Kinematic;
         }
     }
     void ApplyReleaseJump()
