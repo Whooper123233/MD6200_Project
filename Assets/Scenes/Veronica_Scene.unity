@@ -18784,10 +18784,10 @@ MonoBehaviour:
   AttachableLayers:
     serializedVersion: 2
     m_Bits: 256
-  maxWebDistance: 15
+  maxWebDistance: 9
   minWebDistance: 2
-  swingForce: 5
-  normalJumpForce: 7
+  swingForce: 7
+  normalJumpForce: 5
   isSwinging: 0
   webLine: {fileID: 2776940068499363121}
   webOrigin: {fileID: 2046758373}

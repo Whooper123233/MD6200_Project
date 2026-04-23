@@ -22,7 +22,8 @@ public class GrappleSwing : MonoBehaviour
     public PlayerMovement playerMovement;
     [SerializeField]public GrappleArea grappleArea;
 
-
+    [SerializeField] float launchForce = 20f;
+    [SerializeField] float upwardBoost = 2f;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -45,6 +46,7 @@ public class GrappleSwing : MonoBehaviour
         {
             HandleWebShooting();
             HandleSwinging();
+            HandleCatapult();
         }
 
     }
@@ -98,6 +100,41 @@ public class GrappleSwing : MonoBehaviour
             Vector2 forceDirection = new Vector2(Input.GetAxis("Horizontal"), 0);
             rb.AddForce(forceDirection * swingForce);
         }
+    }
+    void HandleCatapult()
+    {
+        if (!grappleArea.canSwing)
+            return;
+
+        if (Input.GetMouseButtonDown(1) && grappleArea.canSwing)
+        {
+            Vector2 aimDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - webOrigin.position;
+
+            RaycastHit2D hit = Physics2D.Raycast(webOrigin.position, aimDirection.normalized, maxWebDistance, AttachableLayers);
+
+            if (hit.collider != null)
+            {
+                LaunchPlayer(hit.point);
+            }
+        }
+    }
+    void LaunchPlayer(Vector2 targetPoint)
+    {
+        // ? IMPORTANT: cancel swing if active
+        if (isSwinging)
+        {
+            Destroy(webJoint);
+            ClearWebLine();
+            isSwinging = false;
+        }
+
+        Vector2 direction = (targetPoint - (Vector2)transform.position).normalized;
+
+        direction.y += upwardBoost;
+        direction.Normalize();
+
+        rb.linearVelocity = Vector2.zero;
+        rb.AddForce(direction * launchForce, ForceMode2D.Impulse);
     }
     void HandleWebRelease()
     {
