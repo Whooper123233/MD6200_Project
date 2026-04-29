@@ -1,13 +1,22 @@
 fileFormatVersion: 2
-guid: 395c048bdc3dbfd4eaaf903e1b605a82
+guid: 03f1ff8ee7aef134ea22b5295778fce7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8566735439352225152
-    second: background_test_foreground_0
+      213: -3075321283680775495
+    second: ELR_SpringlLeaf_0
   - first:
-      213: 3340062223303203185
-    second: background_test_foreground_1
+      213: 7421867485779905927
+    second: ELR_SpringlLeaf_1
+  - first:
+      213: 5891598528820585769
+    second: ELR_SpringlLeaf_2
+  - first:
+      213: -6800149282209211914
+    second: ELR_SpringlLeaf_3
+  - first:
+      213: -9086752253592823719
+    second: ELR_SpringlLeaf_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,12 +58,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 5
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,45 +112,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background_test_foreground_0
+      name: ELR_SpringlLeaf_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 301
-        height: 360
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 08229a4a187dc1980800000000000000
-      internalID: -8566735439352225152
+      spriteID: 9b2520416934255d0800000000000000
+      internalID: -3075321283680775495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: background_test_foreground_1
+      name: ELR_SpringlLeaf_1
       rect:
         serializedVersion: 2
-        x: 339
+        x: 16
         y: 0
-        width: 301
-        height: 360
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 17950bb45e84a5e20800000000000000
-      internalID: 3340062223303203185
+      spriteID: 78dcee3d725cff660800000000000000
+      internalID: 7421867485779905927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELR_SpringlLeaf_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 925a09d95a923c150800000000000000
+      internalID: 5891598528820585769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELR_SpringlLeaf_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f9da4ea14401a1a0800000000000000
+      internalID: -6800149282209211914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELR_SpringlLeaf_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9589e9218fe55e180800000000000000
+      internalID: -9086752253592823719
       vertices: []
       indices: 
       edges: []
@@ -150,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 55bf09e3b3ee96440b1d144f83e3207f
     internalID: 0
     vertices: []
     indices: 
@@ -158,10 +233,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      background_test_foreground_0: -8566735439352225152
-      background_test_foreground_1: 3340062223303203185
+      ELR_SpringlLeaf_0: -3075321283680775495
+      ELR_SpringlLeaf_1: 7421867485779905927
+      ELR_SpringlLeaf_2: 5891598528820585769
+      ELR_SpringlLeaf_3: -6800149282209211914
+      ELR_SpringlLeaf_4: -9086752253592823719
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

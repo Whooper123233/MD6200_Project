@@ -20,7 +20,7 @@ public class GrappleSwing : MonoBehaviour
     private Rigidbody2D rb;
     public Controller2D controllerScript;
     public PlayerMovement playerMovement;
-    [SerializeField]public GrappleArea grappleArea;
+    [SerializeField] public GrappleArea currentGrappleArea;   //NEED THE GRAPPLE AREAD TO BE ON THE GRAPPLE SCRIPT SOME HOW CUZ IT ONLY SEE ONE AREA NOT MULTIPLE !!!
 
     [SerializeField] float launchForce = 20f;
     [SerializeField] float upwardBoost = 2f;
@@ -42,7 +42,7 @@ public class GrappleSwing : MonoBehaviour
         HandleLanding();
         HandleWebRelease();
 
-        if (grappleArea.canSwing || isSwinging)
+        if ((currentGrappleArea != null && currentGrappleArea.canSwing) || isSwinging)
         {
             HandleWebShooting();
             HandleSwinging();
@@ -52,7 +52,8 @@ public class GrappleSwing : MonoBehaviour
     }
     void HandleLanding()
     {
-        if (controllerScript.collsionInfo.below)
+        //NEED TO HANDLE LANDING ON A WALL AS WELL AS THE GFROUND!!!!
+        if (controllerScript.collsionInfo.below && !isSwinging)
         {
             rb.linearVelocity = Vector2.zero;
         }
@@ -63,9 +64,9 @@ public class GrappleSwing : MonoBehaviour
         if (controllerScript.collsionInfo.below || isSwinging)
             return;
 
-        if (Input.GetMouseButtonDown(0) && grappleArea.canSwing)
+        if (Input.GetMouseButtonDown(0) && currentGrappleArea.canSwing)
         {
-            Vector2 attachPoint = grappleArea.GetAttachPoint();
+            Vector2 attachPoint = currentGrappleArea.GetAttachPoint();
 
             float distanceToTarget = Vector2.Distance(webOrigin.position, attachPoint);
 
@@ -103,10 +104,10 @@ public class GrappleSwing : MonoBehaviour
     }
     void HandleCatapult()
     {
-        if (!grappleArea.canSwing)
+        if (!currentGrappleArea.canSwing)
             return;
 
-        if (Input.GetMouseButtonDown(1) && grappleArea.canSwing)
+        if (Input.GetMouseButtonDown(1) && currentGrappleArea.canSwing)
         {
             Vector2 aimDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - webOrigin.position;
 
@@ -120,7 +121,7 @@ public class GrappleSwing : MonoBehaviour
     }
     void LaunchPlayer(Vector2 targetPoint)
     {
-        // ? IMPORTANT: cancel swing if active
+      
         if (isSwinging)
         {
             Destroy(webJoint);

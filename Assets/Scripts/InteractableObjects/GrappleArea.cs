@@ -38,9 +38,10 @@ public class GrappleArea : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            var playerController = collision.GetComponent<Controller2D>();
-            if (playerController != null)
+            var swing = collision.GetComponent<GrappleSwing>();
+            if (swing != null)
             {
+                swing.currentGrappleArea = this;
                 canSwing = true;
             }
         }
@@ -48,9 +49,12 @@ public class GrappleArea : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        var swing = collision.GetComponent<GrappleSwing>();
+        if (swing != null && swing.currentGrappleArea == this)
         {
-            canSwing = false;
+            swing.currentGrappleArea = null;
         }
+
+        canSwing = false;
     }
 }
