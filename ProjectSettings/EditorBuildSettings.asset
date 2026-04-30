@@ -5,9 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Veronica_ALLScenes/Veronica_MenuScene.unity
+    guid: 1c3b9083693b8044b85ddff73a8dfd0d
+  - enabled: 1
+    path: Assets/Scenes/Veronica_ALLScenes/Veronica_Scene.unity
+    guid: bc7d2274c0c5d364f9994cbb51535f4e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

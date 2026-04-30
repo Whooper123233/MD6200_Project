@@ -92,8 +92,8 @@ public class PlayerMovement : MonoBehaviour
         if (!grapple.isSwinging)
         {          
             Gravity();
+            controller.Move(_velocity * Time.deltaTime);
         }
-        controller.Move(_velocity * Time.deltaTime);
         StopBouncing();
     }
 

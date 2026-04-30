@@ -1170,6 +1170,7 @@ GameObject:
   - component: {fileID: 698340466}
   - component: {fileID: 698340469}
   - component: {fileID: 698340468}
+  - component: {fileID: 698340470}
   - component: {fileID: 698340467}
   m_Layer: 5
   m_Name: StartLvel_button
@@ -1241,7 +1242,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 698340468}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 708157234}
+        m_TargetAssemblyTypeName: StartMenuController, Assembly-CSharp
+        m_MethodName: PlayTestLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &698340468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1280,6 +1293,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698340465}
   m_CullTransparentMesh: 1
+--- !u!114 &698340470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698340465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5004f1e5a7ef5440bd3f61f77b64ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StartMenuController
 --- !u!1 &708157230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,6 +1316,7 @@ GameObject:
   - component: {fileID: 708157231}
   - component: {fileID: 708157233}
   - component: {fileID: 708157232}
+  - component: {fileID: 708157234}
   m_Layer: 5
   m_Name: LevelSelectionPanel
   m_TagString: Untagged
@@ -1358,6 +1384,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708157230}
   m_CullTransparentMesh: 1
+--- !u!114 &708157234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708157230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5004f1e5a7ef5440bd3f61f77b64ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StartMenuController
 --- !u!1 &721205509
 GameObject:
   m_ObjectHideFlags: 0
