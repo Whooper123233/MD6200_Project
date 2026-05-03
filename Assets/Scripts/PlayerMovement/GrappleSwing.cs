@@ -40,7 +40,6 @@ public class GrappleSwing : MonoBehaviour
 
         HandleLanding();
         HandleWebRelease();
-
         if ((currentGrappleArea != null && currentGrappleArea.canSwing) || isSwinging)
         {
             HandleWebShooting();
@@ -122,6 +121,8 @@ public class GrappleSwing : MonoBehaviour
             playerMovement._velocity = storedVelocity;
 
             playerMovement._velocity.y += upwardBoost;
+            rb.bodyType = RigidbodyType2D.Kinematic;
+
         }
     }
 
