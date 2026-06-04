@@ -68,6 +68,12 @@ public class PlayerMovement : MonoBehaviour
     public GrappleSwing grapple;
     public Controller2D controller;
 
+    [Header("Interaction")]
+    [SerializeField] private float interactDistance = 2f;
+    [SerializeField] private LayerMask npcMask;
+
+    private NPC_interaction npc_Interaction;
+
 
     void Start()
     {
@@ -81,6 +87,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (InDialogue())
+        {
+            return;
+        }
 
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         int wallDirX = (controller.collsionInfo.left) ? -1 : 1;
@@ -95,6 +105,7 @@ public class PlayerMovement : MonoBehaviour
             controller.Move(_velocity * Time.deltaTime);
         }
         StopBouncing();
+        CheckInteraction();
     }
 
     void HandleDash(Vector2 input)
@@ -219,6 +230,36 @@ public class PlayerMovement : MonoBehaviour
     {
         if (controller.collsionInfo.above && _velocity.y > 0) _velocity.y = 0;
         if (controller.collsionInfo.below && _velocity.y < 0) _velocity.y = 0;
+    }
+    void CheckInteraction()
+    {
+        Vector2 origin = (controller.collsionInfo.faceDir == 1)
+            ? controller.raycastOrigins.bottomRight
+            : controller.raycastOrigins.bottomLeft;
+
+        origin += Vector2.up * 1f;
+        Vector2 direction = Vector2.right * controller.collsionInfo.faceDir;
+
+        RaycastHit2D hit = Physics2D.Raycast(origin, direction, interactDistance, npcMask);
+        Debug.DrawRay(origin, direction * interactDistance, Color.blue);
+
+        if (hit)
+        {
+            npc_Interaction = hit.collider.GetComponent<NPC_interaction>();
+
+            if (npc_Interaction != null && Input.GetKeyDown(KeyCode.E))
+            {
+                npc_Interaction.ActivateDialouge();
+            }
+        }
+        else
+        {
+            npc_Interaction = null;
+        }
+    }
+    private bool InDialogue()
+    {
+        return npc_Interaction != null && npc_Interaction.DialogueActive();
     }
 
 }

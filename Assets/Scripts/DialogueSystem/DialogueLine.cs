@@ -28,11 +28,11 @@ namespace DialogueSystem
         [SerializeField] private Text charNameHolder;
         [SerializeField] private string charName;
 
+        private IEnumerator lineAppear;
+
         private void Awake()
         {
-            textHolder = GetComponent<Text>();
-            textHolder.text = "";
-
+    
             if (imageHolder != null && characterSprite != null)
             {
                 imageHolder.sprite = characterSprite;
@@ -44,10 +44,35 @@ namespace DialogueSystem
             }
         }
 
-        private void Start()
+        private void OnEnable()
         {
-            StartCoroutine(WriteText(input, textHolder, textColor, textFont, delay, sound, delayBetweenLines, charName, charNameHolder));
+            ResetLine();
+            lineAppear = WriteText(input, textHolder, textColor, textFont, delay, sound, delayBetweenLines, charName, charNameHolder);
+            StartCoroutine(lineAppear);
 
+        }
+        private void ResetLine()
+        {
+            textHolder = GetComponent<Text>();
+            textHolder.text = "";
+            finished = false;
+        }
+        private void Update()
+        {
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E))
+            {
+                if(textHolder.text != input)
+                {
+                    StopCoroutine(lineAppear);
+                    textHolder.text = input;
+                    
+                }
+                else
+                {
+                    finished = true;
+                } 
+
+            }
         }
     }
 }

@@ -24,8 +24,7 @@ public class Controller2D : RaycastController
 
     public CollisionInfo collsionInfo;
     public LayerMask hazardMask;
-    public LayerMask npcMask;
-    public float interactDistance = 1.5f;
+
     public Transform respawnPoint;
     [SerializeField] NPC_interaction npc_Interaction;
 
@@ -52,7 +51,6 @@ public class Controller2D : RaycastController
         {
             VerticalCollisions( ref velocity );
         }
-        CheckInteraction();
         transform.Translate(velocity);
     }
     void HorizontalCollisions(ref Vector3 velocity)
@@ -206,23 +204,7 @@ public class Controller2D : RaycastController
             }
         }
     }
-    public void CheckInteraction()
-    {
-        Vector2 origin = ((collsionInfo.faceDir == 1) ? raycastOrigins.bottomRight : raycastOrigins.bottomLeft);
-        origin += Vector2.up * 1f;
-        Vector2 direction = Vector2.right * collsionInfo.faceDir;
 
-        RaycastHit2D hit = Physics2D.Raycast(origin, direction, interactDistance, npcMask);
-        Debug.DrawRay(origin, direction * interactDistance, Color.blue);
-
-        if (hit)
-        {            
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                npc_Interaction.ActivateDialouge();
-            }
-        }
-    }
 
     public struct CollisionInfo
     {
