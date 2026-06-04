@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 66f068b9bba11ec45825a0ab2b98c6c7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4447587249740202459
+    second: slouds_0
+  - first:
+      213: 5189135148815104917
+    second: slouds_1
+  - first:
+      213: 7904922675248474362
+    second: slouds_2
+  - first:
+      213: 1712063917822566310
+    second: slouds_3
+  - first:
+      213: 2054656388131813667
+    second: slouds_4
+  - first:
+      213: 7932771201853524551
+    second: slouds_5
+  - first:
+      213: -2674764638531619615
+    second: slouds_6
+  - first:
+      213: -8973888607161850331
+    second: slouds_7
+  - first:
+      213: -7897038159212677776
+    second: slouds_8
+  - first:
+      213: 5705234789003229904
+    second: slouds_9
+  - first:
+      213: -6827234428269157501
+    second: slouds_10
+  - first:
+      213: 2932539053326976798
+    second: slouds_11
+  - first:
+      213: -514089921703802508
+    second: slouds_12
+  - first:
+      213: 8311436962013240562
+    second: slouds_13
+  - first:
+      213: -5032474650349493347
+    second: slouds_14
+  - first:
+      213: 4682974466685729460
+    second: slouds_15
+  - first:
+      213: -3261920619294153099
+    second: slouds_16
+  - first:
+      213: 4531095534964228479
+    second: slouds_17
+  - first:
+      213: -9075698651221734544
+    second: slouds_18
+  - first:
+      213: -3486547232965525031
+    second: slouds_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 5
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: slouds_0
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 319
+        width: 126
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ebdafe5fef642c0800000000000000
+      internalID: -4447587249740202459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slouds_1
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 302
+        width: 73
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b3e94bce2830840800000000000000
+      internalID: 5189135148815104917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slouds_2
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 306
+        width: 134
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af8ad138a4de3bd60800000000000000
+      internalID: 7904922675248474362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slouds_3
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 319
+        width: 105
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6afd396ff0972c710800000000000000
+      internalID: 1712063917822566310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slouds_4
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 311
+        width: 50
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3297516591b938c10800000000000000
+      internalID: 2054656388131813667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slouds_5
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 304
+        width: 76
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74a8de2e06dd61e60800000000000000
+      internalID: 7932771201853524551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slouds_6
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 265
+        width: 99
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e4fb869bb351ead0800000000000000
+      internalID: -2674764638531619615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slouds_7
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 260
+        width: 104
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52661348bd7567380800000000000000
+      internalID: -8973888607161850331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slouds_8
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 267
+        width: 93
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0757c6e62a5186290800000000000000
+      internalID: -7897038159212677776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slouds_9
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 255
+        width: 130
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dafcbe10d01d2f40800000000000000
+      internalID: 5705234789003229904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slouds_10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 256
+        width: 54
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38323b0b57ac041a0800000000000000
+      internalID: -6827234428269157501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slouds_11
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 249
+        width: 36
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e17c3835bb872b820800000000000000
+      internalID: 2932539053326976798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slouds_12
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 242
+        width: 100
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4798c32a0f59dd8f0800000000000000
+      internalID: -514089921703802508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slouds_13
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 248
+        width: 90
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fcd9dd81e7285370800000000000000
+      internalID: 8311436962013240562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slouds_14
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 249
+        width: 53
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d93a2ccf7fe092ab0800000000000000
+      internalID: -5032474650349493347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slouds_15
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 215
+        width: 61
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4baf60b47744df040800000000000000
+      internalID: 4682974466685729460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slouds_16
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 201
+        width: 104
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5762379aa745bb2d0800000000000000
+      internalID: -3261920619294153099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slouds_17
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 170
+        width: 76
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f71c6ecd16fa1ee30800000000000000
+      internalID: 4531095534964228479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slouds_18
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 180
+        width: 40
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07bcf6d6924ac0280800000000000000
+      internalID: -9075698651221734544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slouds_19
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 180
+        width: 83
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d1087e93cb4d9fc0800000000000000
+      internalID: -3486547232965525031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      slouds_0: -4447587249740202459
+      slouds_1: 5189135148815104917
+      slouds_10: -6827234428269157501
+      slouds_11: 2932539053326976798
+      slouds_12: -514089921703802508
+      slouds_13: 8311436962013240562
+      slouds_14: -5032474650349493347
+      slouds_15: 4682974466685729460
+      slouds_16: -3261920619294153099
+      slouds_17: 4531095534964228479
+      slouds_18: -9075698651221734544
+      slouds_19: -3486547232965525031
+      slouds_2: 7904922675248474362
+      slouds_3: 1712063917822566310
+      slouds_4: 2054656388131813667
+      slouds_5: 7932771201853524551
+      slouds_6: -2674764638531619615
+      slouds_7: -8973888607161850331
+      slouds_8: -7897038159212677776
+      slouds_9: 5705234789003229904
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

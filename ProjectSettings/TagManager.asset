@@ -56,6 +56,12 @@ TagManager:
   - name: BG5
     uniqueID: 136925655
     locked: 0
+  - name: BG6
+    uniqueID: 1991139503
+    locked: 0
+  - name: BG7
+    uniqueID: 3082138651
+    locked: 0
   - name: Platforme
     uniqueID: 3062166593
     locked: 0
@@ -64,6 +70,9 @@ TagManager:
     locked: 0
   - name: ForeGround
     uniqueID: 1083438751
+    locked: 0
+  - name: ForeGround+1
+    uniqueID: 4203608311
     locked: 0
   m_RenderingLayers:
   - Default
