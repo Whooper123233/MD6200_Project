@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7e76e2e6d403146a3c4bb037a71090, type: 3}
+  m_Name: Player_MovementSettings
+  m_EditorClassIdentifier: Assembly-CSharp::MovementSettings
+  moveSpeed: 10
+  maxJumpHeight: 4
+  minJumpHeight: 0.2
+  timeToJumpApex: 0.4
+  jumpCutMultiplier: 0.01
+  fallMultiplier: 2
+  gravity: -49.999996
+  accerlationTimeAir: 0.1
+  accerlationTimeGrounded: 0.06
+  wallJumpClimb: {x: 8, y: 16}
+  wallJumpOff: {x: 8.5, y: 7}
+  wallLeap: {x: 18, y: 17}
+  wallSideSpeedMax: 3.5
+  wallStickTime: 0.2
+  timeToWallUnstick: 0.12794083
+  dashSpeed: 30
+  dashTime: 0.001
+  dashCooldown: 0.5
+  allowAirDash: 1

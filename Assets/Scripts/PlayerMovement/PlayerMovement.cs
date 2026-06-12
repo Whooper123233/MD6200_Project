@@ -15,36 +15,15 @@
 
 using UnityEngine;
 using System.Collections;
-[RequireComponent(typeof(Controller2D))]
+using UnityEngine.Rendering;
+using UnityEngine.Assertions.Must;
+
+[RequireComponent(typeof(Controller2D),typeof(LineRenderer))]
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Jumping")]
-    [SerializeField] public float moveSpeed = 5;
-    public float maxJumpHeight = 4;
-    public float minJumpHeight = 1;
-    [SerializeField] public float timeToJumpApex = 2f;
-    [SerializeField] public float jumpCutMultiplier = .01f;
-    [SerializeField] public float fallMultiplier = 1.2f;
-    [HideInInspector] public float gravity;
+    public MovementSettings ms;
+    private NPC_interaction npc_Interaction;
 
-
-    float maxJumpVelocity;
-    float minJumpVelocity;
-    public Vector3 _velocity;
-    float targetVelocityX;
-    float velocityXSmoothing;
-
-    [Header("Jump Height")]
-    [SerializeField] float accerlationTimeAir = .1f;
-    [SerializeField] float accerlationTimeGrounded = .5f;
-
-    [Header("Wall Jumping")]
-    public Vector2 wallJumpClimb;
-    public Vector2 wallJumpOff;
-    public Vector2 wallLeap;
-    [SerializeField] float wallSideSpeedMax = 3.2f;
-    public float wallStickTime = .25f;
-    public float timeToWallUnstick;
     private bool _justWallJumped = false;
 
     [Header("Coyote Time & Input Buffer")]
@@ -53,36 +32,39 @@ public class PlayerMovement : MonoBehaviour
     public float inputBuffer = .2f;
     private float _inputTimer;
 
-    [Header("Dash")]
-    [SerializeField] private float dashSpeed = 20f;
-    [SerializeField] private float dashTime = 0.2f;
-    [SerializeField] private float dashCooldown = 0.5f;
-    [SerializeField] private bool allowAirDash = true;
-    private bool _isDashing;
-    private float _dashTimeLeft;
-    private float _dashCD;
-    private int _dashDir;
-    private bool _hasDashed;
-
-    [Header("Grapple")]
-    public GrappleSwing grapple;
-    public Controller2D controller;
-
     [Header("Interaction")]
     [SerializeField] private float interactDistance = 2f;
     [SerializeField] private LayerMask npcMask;
 
-    private NPC_interaction npc_Interaction;
+    private bool _isDashing;
+    public float _dashTimeLeft;
+    public float _dashCD;
+    public int _dashDir;
+    public bool _hasDashed;
+    public Vector3 _velocity;
+    float targetVelocityX;
+    float velocityXSmoothing;
+    float maxJumpVelocity;
+    float minJumpVelocity;
+
+    [Header("Grapple")]
+    public GrappleSwing grapple;
+    public Controller2D controller;
+    public bool isSwinging = false;
+    public float overlapRadius = 5f;
+    [SerializeField] public LayerMask grappleMask;
+    [SerializeField] public LayerMask wallMask;
+    LineRenderer lineRenderer;
+    Vector2 totalVelocity;
 
 
     void Start()
-    {
-        
+    {     
         controller = GetComponent<Controller2D>();
-        gravity = -(2 * maxJumpHeight) / Mathf.Pow(timeToJumpApex, 2);
-        maxJumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
-        minJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(gravity) * minJumpHeight);
-
+        lineRenderer = GetComponent<LineRenderer>();
+        ms.gravity = -(2 * ms.maxJumpHeight) / Mathf.Pow(ms.timeToJumpApex, 2);
+        maxJumpVelocity = Mathf.Abs(ms.gravity) * ms.timeToJumpApex;
+        minJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(ms.gravity) * ms.minJumpHeight);
     }
 
     void Update()
@@ -99,6 +81,11 @@ public class PlayerMovement : MonoBehaviour
         HorizontalMovement(input, wallDirX);
         WallSliding(input, wallDirX);
         Jumping();
+        if (Input.GetMouseButtonDown(0))
+        {
+            HandleGrapple();
+        }
+
         if (!grapple.isSwinging)
         {          
             Gravity();
@@ -112,11 +99,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && !_isDashing && _dashCD <= 0)
         {
-            if (controller.collsionInfo.below || (allowAirDash && !_hasDashed))
+            if (controller.collsionInfo.below || (ms.allowAirDash && !_hasDashed))
             {
                 _isDashing = true;
-                _dashTimeLeft = dashTime;
-                _dashCD = dashCooldown;
+                _dashTimeLeft = ms.dashTime;
+                _dashCD = ms.dashCooldown;
                 _dashDir = (input.x != 0) ? (int)Mathf.Sign(input.x) : controller.collsionInfo.faceDir;
                 _hasDashed = true;
             }
@@ -125,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
         if (_isDashing)
         {
             _velocity.y = 0;
-            _velocity.x = _dashDir * dashSpeed;
+            _velocity.x = _dashDir * ms.dashSpeed;
             _dashTimeLeft -= Time.deltaTime;
             if (_dashTimeLeft <= 0)
                 _isDashing = false;
@@ -134,13 +121,11 @@ public class PlayerMovement : MonoBehaviour
         if (_dashCD > 0) _dashCD -= Time.deltaTime;
         if (controller.collsionInfo.below) _hasDashed = false;
     }
-
     void HorizontalMovement(Vector2 input, int wallDirX)
     {
-        float targetVelocityX = input.x * moveSpeed;
-        _velocity.x = Mathf.SmoothDamp(_velocity.x, targetVelocityX, ref velocityXSmoothing,(controller.collsionInfo.below) ? accerlationTimeGrounded : accerlationTimeAir);
+        float targetVelocityX = input.x * ms.moveSpeed;
+        _velocity.x = Mathf.SmoothDamp(_velocity.x, targetVelocityX, ref velocityXSmoothing,(controller.collsionInfo.below) ? ms.accerlationTimeGrounded : ms.accerlationTimeAir);
     }
-
     void WallSliding(Vector2 input, int wallDirX)
     {
         bool wallSliding = false;
@@ -148,21 +133,21 @@ public class PlayerMovement : MonoBehaviour
             !controller.collsionInfo.below && _velocity.y < 0)
         {
             wallSliding = true;
-            if (_velocity.y < -wallSideSpeedMax)
-                _velocity.y = -wallSideSpeedMax;
+            if (_velocity.y < -ms.wallSideSpeedMax)
+                _velocity.y = -ms.wallSideSpeedMax;
 
-            if (timeToWallUnstick > 0)
+            if (ms.timeToWallUnstick > 0)
             {
                 _velocity.x = 0;
                 velocityXSmoothing = 0;
                 if (input.x != wallDirX && input.x != 0)
-                    timeToWallUnstick -= Time.deltaTime;
+                    ms.timeToWallUnstick -= Time.deltaTime;
                 else
-                    timeToWallUnstick = wallStickTime;
+                    ms.timeToWallUnstick = ms.wallStickTime;
             }
             else
             {
-                timeToWallUnstick = wallStickTime;
+                ms.timeToWallUnstick = ms.wallStickTime;
             }
         }
 
@@ -170,24 +155,23 @@ public class PlayerMovement : MonoBehaviour
         {
             if (wallDirX == input.x)
             {
-                _velocity.x = -wallDirX * wallJumpClimb.x;
-                _velocity.y = wallJumpClimb.y;
+                _velocity.x = -wallDirX * ms.wallJumpClimb.x;
+                _velocity.y = ms.wallJumpClimb.y;
             }
             else if (input.x == 0)
             {
-                _velocity.x = -wallDirX * wallJumpOff.x;
-                _velocity.y = wallJumpOff.y;
+                _velocity.x = -wallDirX * ms.wallJumpOff.x;
+                _velocity.y = ms.wallJumpOff.y;
             }
             else
             {
-                _velocity.x = -wallDirX * wallLeap.x;
-                _velocity.y = wallLeap.y;
+                _velocity.x = -wallDirX * ms.wallLeap.x;
+                _velocity.y = ms.wallLeap.y;
             }
             _justWallJumped = true;
             _inputTimer = 0;
         }
     }
-
     void Jumping()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -220,12 +204,51 @@ public class PlayerMovement : MonoBehaviour
             _coyoteTimer -= Time.deltaTime;
         }
     }
+    void HandleGrapple()
+    {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, overlapRadius, grappleMask);
+        foreach (Collider2D hit in hits)
+        {
+            Vector2 grapplePoint = hit.transform.position;
+            Vector2 toGrapple = grapplePoint - (Vector2)transform.position;
+            float radius = toGrapple.magnitude;
 
+            RaycastHit2D rayHit = Physics2D.Raycast(transform.position, (hit.transform.position - transform.position).normalized);
+            if (rayHit)
+            {
+                if ((rayHit.transform.gameObject.layer & wallMask.value) != 0)
+                {
+                    continue;
+                }
+
+                Vector2 dir = toGrapple.normalized;
+                Vector2 tangent = new Vector2(-dir.y, dir.x);
+                float tangentialVelocity = Vector2.Dot(_velocity,tangent);
+                float angularVelocity = tangentialVelocity / radius;
+                float centripetalForce = (angularVelocity * angularVelocity) * radius;
+                Vector2 centripentalVelocity = -dir * centripetalForce;
+
+                totalVelocity = centripentalVelocity + tangentialVelocity * tangent;
+
+                //CONFUSION
+                return;
+            }          
+        }
+    }
     void Gravity()
     {    
-        _velocity.y += gravity * Time.deltaTime;
-    }
 
+        if(_velocity.y < 0)
+        {
+           _velocity.y += (ms.gravity * Time.deltaTime) * ms.fallMultiplier;
+           
+        }
+        else
+        {
+            _velocity.y += ms.gravity * Time.deltaTime;
+
+        }
+    }
     void StopBouncing()
     {
         if (controller.collsionInfo.above && _velocity.y > 0) _velocity.y = 0;
