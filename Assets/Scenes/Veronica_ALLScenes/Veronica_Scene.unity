@@ -58598,7 +58598,6 @@ MonoBehaviour:
   _dashDir: 0
   _hasDashed: 0
   _velocity: {x: 0, y: 0, z: 0}
-  grapple: {fileID: 350411614469154544}
   controller: {fileID: 895089744103063651}
   isSwinging: 0
   overlapRadius: 5
@@ -58608,32 +58607,7 @@ MonoBehaviour:
   wallMask:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &350411614469154544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 671585043490240218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9098de7c8e6b55344b21f86cfff5e360, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GrappleSwing
-  AttachableLayers:
-    serializedVersion: 2
-    m_Bits: 256
-  maxWebDistance: 9
-  minWebDistance: 2
-  swingForce: 20
-  normalJumpForce: 3
-  isSwinging: 0
-  webLine: {fileID: 2776940068499363121}
-  webOrigin: {fileID: 2046758373}
-  controllerScript: {fileID: 895089744103063651}
-  playerMovement: {fileID: 271132278753149663}
   currentGrappleArea: {fileID: 0}
-  upwardBoost: 2
 --- !u!1 &671585043490240218
 GameObject:
   m_ObjectHideFlags: 0
@@ -58648,7 +58622,6 @@ GameObject:
   - component: {fileID: 4962668645788919762}
   - component: {fileID: 895089744103063651}
   - component: {fileID: 271132278753149663}
-  - component: {fileID: 350411614469154544}
   - component: {fileID: 2776940068499363121}
   m_Layer: 3
   m_Name: Player

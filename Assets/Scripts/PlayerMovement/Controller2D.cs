@@ -6,7 +6,7 @@
 // Description: [Collision Detection]
 // 
 // Unity Version: [6000.3.2f1]
-// Project: [Null_Error]
+// Project: []
 // 
 // Date last modified: [19/03/26]
 // Last modified by: [Veronica Wong]

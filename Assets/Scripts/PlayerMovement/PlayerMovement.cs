@@ -48,7 +48,6 @@ public class PlayerMovement : MonoBehaviour
     float minJumpVelocity;
 
     [Header("Grapple")]
-    public GrappleSwing grapple;
     public Controller2D controller;
     public bool isSwinging = false;
     public float overlapRadius = 5f;
@@ -56,12 +55,17 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public LayerMask wallMask;
     LineRenderer lineRenderer;
     Vector2 totalVelocity;
-
+    private Vector2 grapplePoint;
+    public GrappleArea currentGrappleArea;
 
     void Start()
     {     
         controller = GetComponent<Controller2D>();
+
         lineRenderer = GetComponent<LineRenderer>();
+        lineRenderer.positionCount = 2;
+        lineRenderer.enabled = false;
+
         ms.gravity = -(2 * ms.maxJumpHeight) / Mathf.Pow(ms.timeToJumpApex, 2);
         maxJumpVelocity = Mathf.Abs(ms.gravity) * ms.timeToJumpApex;
         minJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(ms.gravity) * ms.minJumpHeight);
@@ -86,7 +90,9 @@ public class PlayerMovement : MonoBehaviour
             HandleGrapple();
         }
 
-        if (!grapple.isSwinging)
+        UpdateGrappleLine();
+
+        if (!isSwinging)
         {          
             Gravity();
             controller.Move(_velocity * Time.deltaTime);
@@ -206,6 +212,13 @@ public class PlayerMovement : MonoBehaviour
     }
     void HandleGrapple()
     {
+        if (currentGrappleArea == null)
+            return;
+
+        grapplePoint = currentGrappleArea.GetAttachPoint();
+
+        lineRenderer.enabled = true;
+
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, overlapRadius, grappleMask);
         foreach (Collider2D hit in hits)
         {
@@ -230,10 +243,17 @@ public class PlayerMovement : MonoBehaviour
 
                 totalVelocity = centripentalVelocity + tangentialVelocity * tangent;
 
-                //CONFUSION
                 return;
             }          
         }
+    }
+    void UpdateGrappleLine()
+    {
+        if (!lineRenderer.enabled)
+            return;
+
+        lineRenderer.SetPosition(0, transform.position);
+        lineRenderer.SetPosition(1, grapplePoint);
     }
     void Gravity()
     {    
