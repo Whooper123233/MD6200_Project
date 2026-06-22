@@ -12,22 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7e76e2e6d403146a3c4bb037a71090, type: 3}
   m_Name: Player_MovementSettings
   m_EditorClassIdentifier: Assembly-CSharp::MovementSettings
-  moveSpeed: 11
+  moveSpeed: 13
   maxJumpHeight: 3
   minJumpHeight: 0.2
-  timeToJumpApex: 0.4
-  jumpCutMultiplier: 0.01
-  fallMultiplier: 1.1
+  timeToJumpApex: 1
+  jumpCutMultiplier: 2
+  fallMultiplier: 1.3
   gravity: -37.499996
   accerlationTimeAir: 0.1
-  accerlationTimeGrounded: 0.06
-  wallJumpClimb: {x: 11, y: 18}
-  wallJumpOff: {x: 8.5, y: 7}
-  wallLeap: {x: 18, y: 17}
+  accerlationTimeGrounded: 0.08
+  wallJumpClimb: {x: 11, y: 20}
+  wallJumpOff: {x: 8.5, y: 24}
+  wallLeap: {x: 18, y: 15}
   wallSideSpeedMax: 3.5
   wallStickTime: 0.2
   timeToWallUnstick: 0.2
   dashSpeed: 30
-  dashTime: 0.08
+  dashTime: 0.1
   dashCooldown: 0.5
   allowAirDash: 1

@@ -57,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 totalVelocity;
     private Vector2 grapplePoint;
     public GrappleArea currentGrappleArea;
+    bool isFacingRight = true;
 
     void Start()
     {     
@@ -81,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         int wallDirX = (controller.collsionInfo.left) ? -1 : 1;
 
+        TurnCheck(input);
         HandleDash(input);
         HorizontalMovement(input, wallDirX);
         WallSliding(input, wallDirX);
@@ -304,5 +306,20 @@ public class PlayerMovement : MonoBehaviour
     {
         return npc_Interaction != null && npc_Interaction.DialogueActive();
     }
+    void TurnCheck(Vector2 input)
+    {
+        if (controller.collsionInfo.faceDir == 1)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+
+
+        }
+        else 
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+
+        }
+    }
+ 
 
 }
