@@ -58,6 +58,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 grapplePoint;
     public GrappleArea currentGrappleArea;
 
+    bool isFacingRight = true;
+
     void Start()
     {     
         controller = GetComponent<Controller2D>();
@@ -70,7 +72,11 @@ public class PlayerMovement : MonoBehaviour
         maxJumpVelocity = Mathf.Abs(ms.gravity) * ms.timeToJumpApex;
         minJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(ms.gravity) * ms.minJumpHeight);
     }
-
+    private void FixedUpdate()
+    {
+        Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"));
+        TurnCheck(input);
+    }
     void Update()
     {
         if (InDialogue())
@@ -299,6 +305,29 @@ public class PlayerMovement : MonoBehaviour
         {
             npc_Interaction = null;
         }
+    }
+    void TurnCheck(Vector2 input)
+    {
+        if(input.x > 0 && !isFacingRight)
+        {
+            Turn();
+            Debug.Log("TURNING RIGHT");
+
+        }
+        else if (input.x < 0 && isFacingRight)
+        {
+            Turn();
+            Debug.Log("TURNING LEFT");
+
+        }
+    }
+    void Turn()
+    {
+        isFacingRight = !isFacingRight;
+
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
     }
     private bool InDialogue()
     {
