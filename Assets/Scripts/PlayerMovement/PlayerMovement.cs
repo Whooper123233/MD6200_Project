@@ -1,30 +1,15 @@
-// -----------------------------------------------------------------------------
-// File: [PlayerMovement]
-// Author: [Veronica Wong]
-// Contributors: []
-// Created: [18/03/26]
-// Description: [Player Movement]
-// 
-// Unity Version: [6000.3.2f1]
-// Project: [Null_Error]
-// 
-// Date last modified: [26/03/26]
-// Last modified by: []
-//
-// -----------------------------------------------------------------------------
-
 using UnityEngine;
 using System.Collections;
 using UnityEngine.Rendering;
 using UnityEngine.Assertions.Must;
+using Unity.Cinemachine;
 
 [RequireComponent(typeof(Controller2D),typeof(LineRenderer))]
 public class PlayerMovement : MonoBehaviour
 {
     public MovementSettings ms;
     private NPC_interaction npc_Interaction;
-
-    private bool _justWallJumped = false;
+    private int facingDir = 1;
 
     [Header("Coyote Time & Input Buffer")]
     public float coyoteTime = .2f;
@@ -36,7 +21,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float interactDistance = 2f;
     [SerializeField] private LayerMask npcMask;
 
-    private bool _isDashing;
+    [Header("Movement stuff dont need to touch")]
+    public bool _isDashing;
     public float _dashTimeLeft;
     public float _dashCD;
     public int _dashDir;
@@ -45,7 +31,9 @@ public class PlayerMovement : MonoBehaviour
     float targetVelocityX;
     float velocityXSmoothing;
     float maxJumpVelocity;
-    float minJumpVelocity;
+    public float minJumpVelocity;
+    public bool _justWallJumped = false;
+    public bool _isWallSliding = false;
 
     [Header("Grapple")]
     public Controller2D controller;
@@ -58,10 +46,17 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 grapplePoint;
     public GrappleArea currentGrappleArea;
 
+    [Header("Camera")]
+    [SerializeField] private CinemachineCamera cinemachine;
+    private CinemachinePositionComposer positionComposer;
+    float dampingTransitionSpeed = 5f;
+
+    [SerializeField] private PlayerMovementStates playerMovementStates;
+
     void Start()
     {     
         controller = GetComponent<Controller2D>();
-
+        positionComposer = cinemachine.GetComponent<CinemachinePositionComposer>();
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.positionCount = 2;
         lineRenderer.enabled = false;
@@ -73,14 +68,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (InDialogue())
-        {
-            return;
-        }
-
+        if (InDialogue()) return;
+       
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         int wallDirX = (controller.collsionInfo.left) ? -1 : 1;
 
+        UpdateFacing(input);
+        transform.localScale = new Vector3(facingDir, 1f, 1f);
+        UpdateCameraDamping();
         HandleDash(input);
         HorizontalMovement(input, wallDirX);
         WallSliding(input, wallDirX);
@@ -134,11 +129,12 @@ public class PlayerMovement : MonoBehaviour
     }
     void WallSliding(Vector2 input, int wallDirX)
     {
-        bool wallSliding = false;
+        _isWallSliding = false;
         if ((controller.collsionInfo.left || controller.collsionInfo.right) &&
             !controller.collsionInfo.below && _velocity.y < 0)
         {
-            wallSliding = true;
+            _isWallSliding = true;
+
             if (_velocity.y < -ms.wallSideSpeedMax)
                 _velocity.y = -ms.wallSideSpeedMax;
 
@@ -157,7 +153,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && wallSliding)
+        if (Input.GetKeyDown(KeyCode.Space) && _isWallSliding)
         {
             if (wallDirX == input.x)
             {
@@ -182,31 +178,37 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            //buffer
             _inputTimer = inputBuffer;
         }
 
         if (_inputTimer > 0)
+            //buffer cd going down
             _inputTimer -= Time.deltaTime;
 
         if (!_justWallJumped && (_coyoteTimer > 0 || controller.collsionInfo.below) && _inputTimer > 0)
         {
+            //resetting stuff ? i dont memeber
             _velocity.y = maxJumpVelocity;
             _inputTimer = 0;
         }
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
+            //jumping
             if (_velocity.y > minJumpVelocity)
                 _velocity.y = minJumpVelocity;
         }
 
         if (controller.collsionInfo.below)
         {
+            //setting coyote time
             _coyoteTimer = coyoteTime;
             _justWallJumped = false;
         }
         else
         {
+            //coyote time going down 
             _coyoteTimer -= Time.deltaTime;
         }
     }
@@ -304,5 +306,45 @@ public class PlayerMovement : MonoBehaviour
     {
         return npc_Interaction != null && npc_Interaction.DialogueActive();
     }
+    void UpdateFacing(Vector2 input)
+    {
+        if (input.x > 0)
+            facingDir = 1;
+        else if (input.x < 0)
+            facingDir = -1;
 
+        else
+        {
+            if (controller.collsionInfo.left)
+                facingDir = 1;
+            else if (controller.collsionInfo.right)
+                facingDir = -1;
+        }
+    }
+    void UpdateCameraDamping()
+    {
+        float dampingTransitionSpeed = 5f;
+        float targetDamping;
+
+        if (positionComposer == null) return;
+
+
+        if (_isWallSliding)
+        {
+            // wall slide
+            targetDamping = 0f;     
+        }
+        else if (!controller.collsionInfo.below && _velocity.y < -10f)
+        {
+            // fast fall
+            targetDamping = 0f;      
+        }
+        else
+        {
+            // chillin
+            targetDamping = 2f;      
+        }
+
+        positionComposer.Damping.y = Mathf.Lerp(positionComposer.Damping.y,targetDamping,dampingTransitionSpeed * Time.deltaTime);
+    }
 }
