@@ -189,8 +189,8 @@ MonoBehaviour:
     m_Bits: 64
   horizontalRaySpacing: 0
   verticalRaySpacing: 0
-  horizontalRayCount: 8
-  verticalRayCount: 8
+  horizontalRayCount: 15
+  verticalRayCount: 15
   skinWidth: 0.025
   boxCollider: {fileID: 0}
   maxClimbAngle: 80

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Player_MovementSettings
   m_EditorClassIdentifier: Assembly-CSharp::MovementSettings
   moveSpeed: 14
-  maxJumpHeight: 3
+  maxJumpHeight: 4
   minJumpHeight: 0.2
   timeToJumpApex: 0.4
   jumpCutMultiplier: 0.01
   fallMultiplier: 1.1
-  gravity: -37.499996
+  gravity: -49.999996
   accerlationTimeAir: 0.1
   accerlationTimeGrounded: 0.06
   wallJumpClimb: {x: 11, y: 20}
@@ -26,7 +26,7 @@ MonoBehaviour:
   wallLeap: {x: 18, y: 20}
   wallSideSpeedMax: 3.5
   wallStickTime: 0.2
-  timeToWallUnstick: 0.0865296
+  timeToWallUnstick: 0.2
   dashSpeed: 30
   dashTime: 0.08
   dashCooldown: 0.5
