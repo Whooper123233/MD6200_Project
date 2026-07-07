@@ -16,7 +16,7 @@ public class FallingPlatform : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Triggered: " + other.name);
+        //Debug.Log("Triggered: " + other.name);
 
         if (!isFalling && other.CompareTag("Player"))
         {

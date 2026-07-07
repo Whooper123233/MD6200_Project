@@ -27,30 +27,33 @@ public class Controller2D : RaycastController
 
     public Transform respawnPoint;
     [SerializeField] NPC_interaction npc_Interaction;
+    private PlayerMovement playerMovement;
+
 
     public override void Start()
     {
         base.Start();
         collsionInfo.faceDir = 1;
+        playerMovement = GetComponent<PlayerMovement>();
+
     }
-    public void Move(Vector3 velocity )
+    public void Move(Vector3 velocity)
     {
         UpdateRayCastOrigins();
         collsionInfo.Reset();
-        if (velocity.y < 0)
-        {
-            DecendSlope(ref velocity);
-        }
-        if(velocity.x != 0)
-        {
-            collsionInfo.faceDir = (int)Mathf.Sign(velocity.x);
-        }
-        HorizontalCollisions( ref velocity );
 
+      
+        if (velocity.y < 0)
+            DecendSlope(ref velocity);
+
+        if (velocity.x != 0)
+            collsionInfo.faceDir = (int)Mathf.Sign(velocity.x);
+
+        HorizontalCollisions(ref velocity);
         if (velocity.y != 0)
-        {
-            VerticalCollisions( ref velocity );
-        }
+            VerticalCollisions(ref velocity);
+        
+
         transform.Translate(velocity);
     }
     void HorizontalCollisions(ref Vector3 velocity)

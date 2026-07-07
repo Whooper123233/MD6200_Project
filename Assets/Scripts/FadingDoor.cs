@@ -21,7 +21,7 @@ public class FadingDoor : MonoBehaviour
     {
         if (hasOpened) return;
 
-        if (GameManager.Instance.playerData.Fireflies >= fireFliesNeeded)
+        if (GameManager.Instance != null && GameManager.Instance.playerData.Fireflies >= fireFliesNeeded)
         {
             hasOpened = true;
 
