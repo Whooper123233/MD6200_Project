@@ -107,37 +107,37 @@ public class PlayerMovementStates : MonoBehaviour
     private void HandleIdel()
     {
         animator.Play(idleAnim);
-        Debug.Log("IDEL ANI PLAYING");
+        //Debug.Log("IDEL ANI PLAYING");
     }
     private void HandleRun()
     {
         animator.Play(runAnim);
-        Debug.Log("RUN ANI PLAYING");
+        //Debug.Log("RUN ANI PLAYING");
 
     }
     private void HandleJump()
     {
         animator.Play(jumpAnim);
-        Debug.Log("JUMP ANI PLAYING");
+        //Debug.Log("JUMP ANI PLAYING");
 
     }
     private void HandleWallJump()
     {
         animator.Play(wallJumpAnim);
-        Debug.Log("WALL JUMP ANI PLAYING");
+        //Debug.Log("WALL JUMP ANI PLAYING");
 
     }
     private void HandleWallSlide()
     {
         animator.Play(wallSlideAnim);
-        Debug.Log("WALL SLIDE ANI PLAYING");
+        //Debug.Log("WALL SLIDE ANI PLAYING");
 
 
     }
     private void HandleFalling()
     {
         animator.Play(fallAnim);
-        Debug.Log("FALL ANI PLAYING");
+        //Debug.Log("FALL ANI PLAYING");
 
 
     }
