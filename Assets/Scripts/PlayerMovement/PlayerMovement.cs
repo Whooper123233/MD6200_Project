@@ -47,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
     public GrappleArea currentGrappleArea;
     private float ropeLength;
 
+
     [Header("Camera")]
     [SerializeField] private CinemachineCamera cinemachine;
     private CinemachinePositionComposer positionComposer;
@@ -87,9 +88,43 @@ public class PlayerMovement : MonoBehaviour
         {
             totalVelocity.y += ms.gravity * Time.deltaTime;
 
-            controller.Move(totalVelocity * Time.deltaTime);
+            if (input.x != 0f)
+            {
+                Vector2 toGrappleInput = (Vector2)transform.position - grapplePoint;
+                float distInput = toGrappleInput.magnitude;
+                if (distInput > 0.0001f)
+                {
+                    Vector2 radialDirInput = toGrappleInput / distInput;
+                    Vector2 tangent = new Vector2(-radialDirInput.y, radialDirInput.x);
 
-            ConstrainToRope();  
+                    if (Vector2.Dot(tangent, Vector2.right) < 0f)
+                        tangent = -tangent;
+
+                    totalVelocity += tangent * input.x * ms.swingAcceleration * Time.deltaTime;
+
+                    if (totalVelocity.magnitude > ms.maxSwingSpeed)
+                        totalVelocity = totalVelocity.normalized * ms.maxSwingSpeed;
+                }
+            }
+
+        
+            Vector2 toGrapple = (Vector2)transform.position - grapplePoint;
+            float distance = toGrapple.magnitude;
+            if (distance > 0.0001f)
+            {
+                Vector2 dir = toGrapple / distance;
+                float radialSpeed = Vector2.Dot(totalVelocity, dir);
+                totalVelocity -= dir * radialSpeed;
+
+                float drift = distance - ropeLength;
+                if (Mathf.Abs(drift) > 0.001f)
+                {
+                    Vector2 correction = -dir * drift * 10f * Time.deltaTime; 
+                    controller.Move(correction);
+                }
+            }
+
+            controller.Move(totalVelocity * Time.deltaTime);
 
             if (controller.collsionInfo.above && totalVelocity.y > 0) totalVelocity.y = 0;
             if (controller.collsionInfo.below && totalVelocity.y < 0) totalVelocity.y = 0;
@@ -108,7 +143,6 @@ public class PlayerMovement : MonoBehaviour
 
             return;
         }
-
         HandleDash(input);
         HorizontalMovement(input, wallDirX);
         WallSliding(input, wallDirX);
@@ -119,6 +153,7 @@ public class PlayerMovement : MonoBehaviour
         StopBouncing();
         CheckInteraction();
     }
+
     void HandleDash(Vector2 input)
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && !_isDashing && _dashCD <= 0)

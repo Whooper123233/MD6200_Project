@@ -29,4 +29,8 @@ public class MovementSettings : ScriptableObject
     [SerializeField] public float dashTime = 0.2f;
     [SerializeField] public float dashCooldown = 0.5f;
     [SerializeField] public bool allowAirDash = true;
+
+    [Header("Swing")]
+    [SerializeField] public float swingAcceleration = 20f;
+    [SerializeField] public float maxSwingSpeed = 15f;
 }
