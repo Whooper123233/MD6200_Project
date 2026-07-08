@@ -31,3 +31,5 @@ MonoBehaviour:
   dashTime: 0.08
   dashCooldown: 0.5
   allowAirDash: 1
+  swingAcceleration: 30
+  maxSwingSpeed: 20

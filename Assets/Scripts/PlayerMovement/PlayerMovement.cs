@@ -87,9 +87,42 @@ public class PlayerMovement : MonoBehaviour
         {
             totalVelocity.y += ms.gravity * Time.deltaTime;
 
-            controller.Move(totalVelocity * Time.deltaTime);
+            if (input.x != 0f)
+            {
+                Vector2 toGrappleInput = (Vector2)transform.position - grapplePoint;
+                float distInput = toGrappleInput.magnitude;
+                if (distInput > 0.0001f)
+                {
+                    Vector2 radialDirInput = toGrappleInput / distInput;
+                    Vector2 tangent = new Vector2(-radialDirInput.y, radialDirInput.x);
 
-            ConstrainToRope();  
+                    if (Vector2.Dot(tangent, Vector2.right) < 0f)
+                        tangent = -tangent;
+
+                    totalVelocity += tangent * input.x * ms.swingAcceleration * Time.deltaTime;
+
+                    if (totalVelocity.magnitude > ms.maxSwingSpeed)
+                        totalVelocity = totalVelocity.normalized * ms.maxSwingSpeed;
+                }
+            }
+
+            Vector2 toGrapple = (Vector2)transform.position - grapplePoint;
+            float distance = toGrapple.magnitude;
+            if (distance > 0.0001f)
+            {
+                Vector2 dir = toGrapple / distance;
+                float radialSpeed = Vector2.Dot(totalVelocity, dir);
+                totalVelocity -= dir * radialSpeed;
+
+                float drift = distance - ropeLength;
+                if (Mathf.Abs(drift) > 0.001f)
+                {
+                    Vector2 correction = -dir * drift * 10f * Time.deltaTime; 
+                    controller.Move(correction); 
+                }
+            }
+
+            controller.Move(totalVelocity * Time.deltaTime);
 
             if (controller.collsionInfo.above && totalVelocity.y > 0) totalVelocity.y = 0;
             if (controller.collsionInfo.below && totalVelocity.y < 0) totalVelocity.y = 0;
@@ -247,22 +280,6 @@ public class PlayerMovement : MonoBehaviour
 
         totalVelocity = _velocity;
     }
-    void ConstrainToRope()
-    {
-        Vector2 pos = transform.position;
-        Vector2 toGrapple = pos - grapplePoint;
-        float distance = toGrapple.magnitude;
-        if (distance <= 0.0001f) return;
-
-        Vector2 dir = toGrapple / distance;
-
-        float radialSpeed = Vector2.Dot(totalVelocity, dir);
-        totalVelocity -= dir * radialSpeed;
-
-        Vector2 corrected = grapplePoint + dir * ropeLength;
-        transform.position = new Vector3(corrected.x, corrected.y, transform.position.z);
-    }
-
     void UpdateGrappleLine()
     {
         if (!lineRenderer.enabled)
