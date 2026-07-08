@@ -45,11 +45,11 @@ public class PlayerMovement : MonoBehaviour
     Vector2 totalVelocity;
     private Vector2 grapplePoint;
     public GrappleArea currentGrappleArea;
+    private float ropeLength;
 
     [Header("Camera")]
     [SerializeField] private CinemachineCamera cinemachine;
     private CinemachinePositionComposer positionComposer;
-    float dampingTransitionSpeed = 5f;
 
     [SerializeField] private PlayerMovementStates playerMovementStates;
 
@@ -59,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
         positionComposer = cinemachine.GetComponent<CinemachinePositionComposer>();
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.positionCount = 2;
+        lineRenderer.useWorldSpace = true;  
         lineRenderer.enabled = false;
 
         ms.gravity = -(2 * ms.maxJumpHeight) / Mathf.Pow(ms.timeToJumpApex, 2);
@@ -69,33 +70,55 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         if (InDialogue()) return;
-       
+
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         int wallDirX = (controller.collsionInfo.left) ? -1 : 1;
 
         UpdateFacing(input);
         transform.localScale = new Vector3(facingDir, 1f, 1f);
         UpdateCameraDamping();
+
+        if (Input.GetMouseButtonDown(0) && currentGrappleArea != null)
+        {
+            isSwinging = true;
+            HandleGrapple();
+        }
+        if (isSwinging)
+        {
+            totalVelocity.y += ms.gravity * Time.deltaTime;
+
+            controller.Move(totalVelocity * Time.deltaTime);
+
+            ConstrainToRope();  
+
+            if (controller.collsionInfo.above && totalVelocity.y > 0) totalVelocity.y = 0;
+            if (controller.collsionInfo.below && totalVelocity.y < 0) totalVelocity.y = 0;
+            if (controller.collsionInfo.left && totalVelocity.x < 0) totalVelocity.x = 0;
+            if (controller.collsionInfo.right && totalVelocity.x > 0) totalVelocity.x = 0;
+
+            UpdateGrappleLine();
+
+            if (Input.GetMouseButtonUp(0) || controller.collsionInfo.below)
+            {
+                isSwinging = false;
+                lineRenderer.enabled = false;
+                _velocity = totalVelocity;
+                velocityXSmoothing = totalVelocity.x;
+            }
+
+            return;
+        }
+
         HandleDash(input);
         HorizontalMovement(input, wallDirX);
         WallSliding(input, wallDirX);
         Jumping();
-        if (Input.GetMouseButtonDown(0))
-        {
-            HandleGrapple();
-        }
 
-        UpdateGrappleLine();
-
-        if (!isSwinging)
-        {          
-            Gravity();
-            controller.Move(_velocity * Time.deltaTime);
-        }
+        Gravity();
+        controller.Move(_velocity * Time.deltaTime);
         StopBouncing();
         CheckInteraction();
     }
-
     void HandleDash(Vector2 input)
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && !_isDashing && _dashCD <= 0)
@@ -218,37 +241,28 @@ public class PlayerMovement : MonoBehaviour
             return;
 
         grapplePoint = currentGrappleArea.GetAttachPoint();
+        ropeLength = Vector2.Distance(transform.position, grapplePoint);
 
         lineRenderer.enabled = true;
 
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, overlapRadius, grappleMask);
-        foreach (Collider2D hit in hits)
-        {
-            Vector2 grapplePoint = hit.transform.position;
-            Vector2 toGrapple = grapplePoint - (Vector2)transform.position;
-            float radius = toGrapple.magnitude;
-
-            RaycastHit2D rayHit = Physics2D.Raycast(transform.position, (hit.transform.position - transform.position).normalized);
-            if (rayHit)
-            {
-                if ((rayHit.transform.gameObject.layer & wallMask.value) != 0)
-                {
-                    continue;
-                }
-
-                Vector2 dir = toGrapple.normalized;
-                Vector2 tangent = new Vector2(-dir.y, dir.x);
-                float tangentialVelocity = Vector2.Dot(_velocity,tangent);
-                float angularVelocity = tangentialVelocity / radius;
-                float centripetalForce = (angularVelocity * angularVelocity) * radius;
-                Vector2 centripentalVelocity = -dir * centripetalForce;
-
-                totalVelocity = centripentalVelocity + tangentialVelocity * tangent;
-
-                return;
-            }          
-        }
+        totalVelocity = _velocity;
     }
+    void ConstrainToRope()
+    {
+        Vector2 pos = transform.position;
+        Vector2 toGrapple = pos - grapplePoint;
+        float distance = toGrapple.magnitude;
+        if (distance <= 0.0001f) return;
+
+        Vector2 dir = toGrapple / distance;
+
+        float radialSpeed = Vector2.Dot(totalVelocity, dir);
+        totalVelocity -= dir * radialSpeed;
+
+        Vector2 corrected = grapplePoint + dir * ropeLength;
+        transform.position = new Vector3(corrected.x, corrected.y, transform.position.z);
+    }
+
     void UpdateGrappleLine()
     {
         if (!lineRenderer.enabled)
