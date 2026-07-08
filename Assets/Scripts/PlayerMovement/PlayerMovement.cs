@@ -83,11 +83,13 @@ public class PlayerMovement : MonoBehaviour
             isSwinging = true;
             HandleGrapple();
         }
-
         if (isSwinging)
         {
-            Swing();
+            totalVelocity.y += ms.gravity * Time.deltaTime;
+
             controller.Move(totalVelocity * Time.deltaTime);
+
+            ConstrainToRope();  
 
             if (controller.collsionInfo.above && totalVelocity.y > 0) totalVelocity.y = 0;
             if (controller.collsionInfo.below && totalVelocity.y < 0) totalVelocity.y = 0;
@@ -101,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
                 isSwinging = false;
                 lineRenderer.enabled = false;
                 _velocity = totalVelocity;
-                velocityXSmoothing = totalVelocity.x; 
+                velocityXSmoothing = totalVelocity.x;
             }
 
             return;
@@ -245,35 +247,22 @@ public class PlayerMovement : MonoBehaviour
 
         totalVelocity = _velocity;
     }
-
-    void Swing()
+    void ConstrainToRope()
     {
-        if (currentGrappleArea == null)
-            return;
-
-        totalVelocity.y += ms.gravity * Time.deltaTime;
-
         Vector2 pos = transform.position;
         Vector2 toGrapple = pos - grapplePoint;
         float distance = toGrapple.magnitude;
+        if (distance <= 0.0001f) return;
 
-        if (distance <= 0f)
-            return;
+        Vector2 dir = toGrapple / distance;
 
-        Vector2 dir = toGrapple / distance; 
+        float radialSpeed = Vector2.Dot(totalVelocity, dir);
+        totalVelocity -= dir * radialSpeed;
 
-        if (distance >= ropeLength)
-        {
-           
-            float radialSpeed = Vector2.Dot(totalVelocity, dir);
-            if (radialSpeed > 0)
-                totalVelocity -= dir * radialSpeed;
-
-
-            Vector2 corrected = grapplePoint + dir * ropeLength;
-            transform.position = new Vector3(corrected.x, corrected.y);
-        }
+        Vector2 corrected = grapplePoint + dir * ropeLength;
+        transform.position = new Vector3(corrected.x, corrected.y, transform.position.z);
     }
+
     void UpdateGrappleLine()
     {
         if (!lineRenderer.enabled)
