@@ -191,7 +191,7 @@ MonoBehaviour:
   verticalRaySpacing: 0
   horizontalRayCount: 15
   verticalRayCount: 15
-  skinWidth: 0.025
+  skinWidth: 0.03
   boxCollider: {fileID: 0}
   maxClimbAngle: 80
   maxDecendAngle: 75
