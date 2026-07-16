@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: ef3e6b42219ba7b48b5a2a72263edb66
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1619794898913250169
+    second: mcsprite-Sheet500 1_0
+  - first:
+      213: -1397340764014524557
+    second: mcsprite-Sheet500 1_1
+  - first:
+      213: 3980191761127548966
+    second: mcsprite-Sheet500 1_2
+  - first:
+      213: -8516334759072874929
+    second: mcsprite-Sheet500 1_3
+  - first:
+      213: -2721227796142009724
+    second: mcsprite-Sheet500 1_4
+  - first:
+      213: 1461659315932044642
+    second: mcsprite-Sheet500 1_5
+  - first:
+      213: -1053230136331258077
+    second: mcsprite-Sheet500 1_6
+  - first:
+      213: 4506847186472178555
+    second: mcsprite-Sheet500 1_7
+  - first:
+      213: -7615025957859083600
+    second: mcsprite-Sheet500 1_8
+  - first:
+      213: -953067198480379407
+    second: mcsprite-Sheet500 1_9
+  - first:
+      213: -7674133607879743836
+    second: mcsprite-Sheet500 1_10
+  - first:
+      213: 8234574457346810286
+    second: mcsprite-Sheet500 1_11
+  - first:
+      213: 4826156240104641405
+    second: mcsprite-Sheet500 1_12
+  - first:
+      213: 7259263308091209694
+    second: mcsprite-Sheet500 1_13
+  - first:
+      213: -2304287337851373134
+    second: mcsprite-Sheet500 1_14
+  - first:
+      213: 2181906457067136550
+    second: mcsprite-Sheet500 1_15
+  - first:
+      213: 2516816901860840993
+    second: mcsprite-Sheet500 1_16
+  - first:
+      213: 5101580227125293092
+    second: mcsprite-Sheet500 1_17
+  - first:
+      213: 5184900681631625667
+    second: mcsprite-Sheet500 1_18
+  - first:
+      213: -4582683073894554545
+    second: mcsprite-Sheet500 1_19
+  - first:
+      213: -6847400511867604667
+    second: mcsprite-Sheet500 1_20
+  - first:
+      213: 8148955535782593014
+    second: mcsprite-Sheet500 1_21
+  - first:
+      213: -5730817360295406586
+    second: mcsprite-Sheet500 1_22
+  - first:
+      213: 7752340305674716369
+    second: mcsprite-Sheet500 1_23
+  - first:
+      213: 8448747901927369590
+    second: mcsprite-Sheet500 1_24
+  - first:
+      213: 771220323783778137
+    second: mcsprite-Sheet500 1_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 639
+        width: 132
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97bc6b6e0eaaa7610800000000000000
+      internalID: 1619794898913250169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_1
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 639
+        width: 102
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 377cdb28af5ab9ce0800000000000000
+      internalID: -1397340764014524557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_2
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 639
+        width: 132
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 628a1fb915b7c3730800000000000000
+      internalID: 3980191761127548966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_3
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 639
+        width: 102
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4e362978a6efc980800000000000000
+      internalID: -8516334759072874929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_4
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 484
+        width: 107
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4825902bcb14c3ad0800000000000000
+      internalID: -2721227796142009724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_5
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 479
+        width: 107
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26d15c4576bd84410800000000000000
+      internalID: 1461659315932044642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_6
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 484
+        width: 107
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3273d3175cc2261f0800000000000000
+      internalID: -1053230136331258077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_7
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 484
+        width: 107
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7394a643a98b8e30800000000000000
+      internalID: 4506847186472178555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_8
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 479
+        width: 107
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ba3e6acc3ef15690800000000000000
+      internalID: -7615025957859083600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_9
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 484
+        width: 107
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f1108bbe6606c2f0800000000000000
+      internalID: -953067198480379407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 319
+        width: 136
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a6e0779420008590800000000000000
+      internalID: -7674133607879743836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_11
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 319
+        width: 117
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea169ae17d5174270800000000000000
+      internalID: 8234574457346810286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_12
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 324
+        width: 117
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d73d8f1c783f9f240800000000000000
+      internalID: 4826156240104641405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_13
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 319
+        width: 117
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed7bdc974851eb460800000000000000
+      internalID: 7259263308091209694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_14
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 319
+        width: 137
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b930f6ffd68500e0800000000000000
+      internalID: -2304287337851373134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_15
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 319
+        width: 127
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6262e9acc50b74e10800000000000000
+      internalID: 2181906457067136550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_16
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 159
+        width: 107
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1265d1833a78de220800000000000000
+      internalID: 2516816901860840993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_17
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 164
+        width: 107
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 420b5feef247cc640800000000000000
+      internalID: 5101580227125293092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_18
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 169
+        width: 107
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c1755cf2b774f740800000000000000
+      internalID: 5184900681631625667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_19
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 184
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f44e15e360a0760c0800000000000000
+      internalID: -4582683073894554545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_20
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 179
+        width: 107
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 541bd47738529f0a0800000000000000
+      internalID: -6847400511867604667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_21
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 174
+        width: 107
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f146c082e7e61170800000000000000
+      internalID: 8148955535782593014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 106
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60453f659fb0870b0800000000000000
+      internalID: -5730817360295406586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_23
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 14
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d44fa13f68d59b60800000000000000
+      internalID: 7752340305674716369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_24
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 9
+        width: 107
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67b2533147bff3570800000000000000
+      internalID: 8448747901927369590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite-Sheet500 1_25
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 14
+        width: 107
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95f91b26ccce3ba00800000000000000
+      internalID: 771220323783778137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      mcsprite-Sheet500 1_0: 1619794898913250169
+      mcsprite-Sheet500 1_1: -1397340764014524557
+      mcsprite-Sheet500 1_10: -7674133607879743836
+      mcsprite-Sheet500 1_11: 8234574457346810286
+      mcsprite-Sheet500 1_12: 4826156240104641405
+      mcsprite-Sheet500 1_13: 7259263308091209694
+      mcsprite-Sheet500 1_14: -2304287337851373134
+      mcsprite-Sheet500 1_15: 2181906457067136550
+      mcsprite-Sheet500 1_16: 2516816901860840993
+      mcsprite-Sheet500 1_17: 5101580227125293092
+      mcsprite-Sheet500 1_18: 5184900681631625667
+      mcsprite-Sheet500 1_19: -4582683073894554545
+      mcsprite-Sheet500 1_2: 3980191761127548966
+      mcsprite-Sheet500 1_20: -6847400511867604667
+      mcsprite-Sheet500 1_21: 8148955535782593014
+      mcsprite-Sheet500 1_22: -5730817360295406586
+      mcsprite-Sheet500 1_23: 7752340305674716369
+      mcsprite-Sheet500 1_24: 8448747901927369590
+      mcsprite-Sheet500 1_25: 771220323783778137
+      mcsprite-Sheet500 1_3: -8516334759072874929
+      mcsprite-Sheet500 1_4: -2721227796142009724
+      mcsprite-Sheet500 1_5: 1461659315932044642
+      mcsprite-Sheet500 1_6: -1053230136331258077
+      mcsprite-Sheet500 1_7: 4506847186472178555
+      mcsprite-Sheet500 1_8: -7615025957859083600
+      mcsprite-Sheet500 1_9: -953067198480379407
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
