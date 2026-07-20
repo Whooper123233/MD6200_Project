@@ -3180,7 +3180,7 @@ Transform:
   m_GameObject: {fileID: 513715106}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16, y: 28.8, z: 8.6}
+  m_LocalPosition: {x: 16, y: 19.19, z: 5.9}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31695,6 +31695,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   loaderCanvas: {fileID: 590863129}
   progressBar: {fileID: 1427491295}
+  minLoadTime: 1
+  fillSpeed: 2
 --- !u!4 &1527552406
 Transform:
   m_ObjectHideFlags: 0
@@ -35639,7 +35641,6 @@ SpriteRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 141144391}
   - {fileID: 1408136727}
   - {fileID: 1665765425}
   - {fileID: 464180062}
@@ -35650,3 +35651,4 @@ SceneRoots:
   - {fileID: 354099459}
   - {fileID: 464411200}
   - {fileID: 1965995409}
+  - {fileID: 141144391}
