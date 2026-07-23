@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1994285670887710402}
   - component: {fileID: 1006108923931805801}
+  - component: {fileID: 2545300854621869842}
   m_Layer: 0
   m_Name: Cameras
   m_TagString: Untagged
@@ -46,6 +47,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7aae9fb1f5a86b439585dbb3e2b8cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+--- !u!114 &2545300854621869842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166304247207749285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6ca8853d0aeb0448ceda642011f4df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  menuCanvas: {fileID: 0}
 --- !u!1 &3068020071636080734
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,7 +89,7 @@ Transform:
   m_GameObject: {fileID: 3068020071636080734}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.8594246, z: -2}
+  m_LocalPosition: {x: -5.290001, y: 4.8900003, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -308,7 +322,7 @@ MonoBehaviour:
   CameraDistance: 20
   DeadZoneDepth: 0
   Composition:
-    ScreenPosition: {x: 0, y: 0.19}
+    ScreenPosition: {x: 0, y: 0}
     DeadZone:
       Enabled: 1
       Size: {x: 0.15, y: 0.19}

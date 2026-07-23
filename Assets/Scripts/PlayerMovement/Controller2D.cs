@@ -69,7 +69,7 @@ public class Controller2D : RaycastController
             rayLength = 2 * skinWidth;
         }
 
-        for (int i = 0; i < verticalRayCount; i++)
+        for (int i = 0; i < horizontalRayCount; i++) // fixed: was verticalRayCount
         {
             Vector2 rayOrigin = (dirX == -1) ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight;
             rayOrigin += Vector2.up * (horizontalRaySpacing * i);
@@ -92,7 +92,9 @@ public class Controller2D : RaycastController
                 }
                 if (!collsionInfo.climbingSlop || slopeAngle > maxClimbAngle)
                 {
-                    velocity.x = (hit.distance - skinWidth) * dirX;
+                    // fixed: clamp so we never push past 0 distance from the wall,
+                    // which previously could flip the sign of velocity.x
+                    velocity.x = Mathf.Max(hit.distance - skinWidth, 0f) * dirX;
                     rayLength = hit.distance;
                     if (collsionInfo.climbingSlop)
                     {
@@ -104,36 +106,38 @@ public class Controller2D : RaycastController
             }
             CheckHazard(rayOrigin, Vector2.right * dirX, rayLength);
 
-            Vector2 rayOriginOpp = (dirX == -1) ? raycastOrigins.bottomRight : raycastOrigins.bottomLeft;
-            rayOriginOpp += Vector2.up * (horizontalRaySpacing * i);
-            float oppRayLength = Mathf.Abs(velocity.x) + skinWidth;
-            if (oppRayLength < 2 * skinWidth) oppRayLength = 2 * skinWidth;
-
-            RaycastHit2D oppHit = Physics2D.Raycast(rayOriginOpp, Vector2.right * -dirX, oppRayLength, collisionMask);
-            Debug.DrawRay(rayOriginOpp, Vector2.right * -dirX * oppRayLength, Color.cyan);
-            if (oppHit)
+            if (Mathf.Sign(velocity.x) == dirX || velocity.x == 0f)
             {
-                float oppDistance = oppHit.distance - skinWidth;
-                if (oppDistance < 0f) { oppDistance = 0f; }
+                Vector2 rayOriginOpp = (dirX == -1) ? raycastOrigins.bottomRight : raycastOrigins.bottomLeft;
+                rayOriginOpp += Vector2.up * (horizontalRaySpacing * i);
+                float oppRayLength = Mathf.Abs(velocity.x) + skinWidth;
+                if (oppRayLength < 2 * skinWidth) oppRayLength = 2 * skinWidth;
 
-                if (-dirX < 0 && velocity.x < -oppDistance)
+                RaycastHit2D oppHit = Physics2D.Raycast(rayOriginOpp, Vector2.right * -dirX, oppRayLength, collisionMask);
+                Debug.DrawRay(rayOriginOpp, Vector2.right * -dirX * oppRayLength, Color.cyan);
+                if (oppHit)
                 {
-                    velocity.x = -oppDistance;
+                    float oppDistance = Mathf.Max(oppHit.distance - skinWidth, 0f);
+
+                    if (-dirX < 0 && velocity.x < -oppDistance)
+                    {
+                        velocity.x = -oppDistance;
+                    }
+                    else if (-dirX > 0 && velocity.x > oppDistance)
+                    {
+                        velocity.x = oppDistance;
+                    }
+                    if (dirX == -1)
+                    {
+                        collsionInfo.right = true;
+                    }
+                    else
+                    {
+                        collsionInfo.left = true;
+                    }
                 }
-                else if (-dirX > 0 && velocity.x > oppDistance)
-                {
-                    velocity.x = oppDistance;
-                }
-                if (dirX == -1)
-                {
-                    collsionInfo.right = true;
-                }
-                else
-                {
-                    collsionInfo.left = true;
-                }
+                CheckHazard(rayOriginOpp, Vector2.right * -dirX, oppRayLength);
             }
-            CheckHazard(rayOriginOpp, Vector2.right * -dirX, oppRayLength);
         }
     }
     void VerticalCollisions(ref Vector3 velocity)
