@@ -69,7 +69,7 @@ public class Controller2D : RaycastController
             rayLength = 2 * skinWidth;
         }
 
-        for (int i = 0; i < horizontalRayCount; i++) // fixed: was verticalRayCount
+        for (int i = 0; i < horizontalRayCount; i++)
         {
             Vector2 rayOrigin = (dirX == -1) ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight;
             rayOrigin += Vector2.up * (horizontalRaySpacing * i);
@@ -90,10 +90,8 @@ public class Controller2D : RaycastController
                     ClimbSlope(ref velocity, slopeAngle);
                     velocity.x += disranceToSlopeStart * dirX;
                 }
-                if (!collsionInfo.climbingSlop || slopeAngle > maxClimbAngle)
+                if (slopeAngle > maxClimbAngle) 
                 {
-                    // fixed: clamp so we never push past 0 distance from the wall,
-                    // which previously could flip the sign of velocity.x
                     velocity.x = Mathf.Max(hit.distance - skinWidth, 0f) * dirX;
                     rayLength = hit.distance;
                     if (collsionInfo.climbingSlop)

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7e76e2e6d403146a3c4bb037a71090, type: 3}
   m_Name: Player_MovementSettings
   m_EditorClassIdentifier: Assembly-CSharp::MovementSettings
-  moveSpeed: 14
+  moveSpeed: 13
   maxJumpHeight: 4
   minJumpHeight: 0.2
   timeToJumpApex: 0.4
