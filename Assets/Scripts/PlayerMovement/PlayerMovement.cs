@@ -150,6 +150,7 @@ public class PlayerMovement : MonoBehaviour
         Gravity();
         controller.Move(_velocity * Time.deltaTime);
         StopBouncing();
+        StopBouncingX();
         CheckInteraction();
     }
     void HandleDash(Vector2 input)
@@ -306,6 +307,19 @@ public class PlayerMovement : MonoBehaviour
     {
         if (controller.collsionInfo.above && _velocity.y > 0) _velocity.y = 0;
         if (controller.collsionInfo.below && _velocity.y < 0) _velocity.y = 0;
+    }
+    void StopBouncingX()
+    {
+        if (controller.collsionInfo.left && _velocity.x < 0)
+        {
+            _velocity.x = 0;
+            velocityXSmoothing = 0; 
+        }
+        if (controller.collsionInfo.right && _velocity.x > 0)
+        {
+            _velocity.x = 0;
+            velocityXSmoothing = 0;
+        }
     }
     void CheckInteraction()
     {
