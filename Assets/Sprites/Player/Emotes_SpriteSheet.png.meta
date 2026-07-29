@@ -1,0 +1,635 @@
+fileFormatVersion: 2
+guid: 335965b803ab3b745a85c4df684dc748
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7243558445328098837
+    second: Emotes_SpriteSheet_0
+  - first:
+      213: 1843597191448418923
+    second: Emotes_SpriteSheet_1
+  - first:
+      213: -363542967956163151
+    second: Emotes_SpriteSheet_2
+  - first:
+      213: -2172387114096903077
+    second: Emotes_SpriteSheet_3
+  - first:
+      213: 1359758570185619446
+    second: Emotes_SpriteSheet_4
+  - first:
+      213: 4144990419994829237
+    second: Emotes_SpriteSheet_5
+  - first:
+      213: -2885119724487587531
+    second: Emotes_SpriteSheet_6
+  - first:
+      213: -6027679187571603433
+    second: Emotes_SpriteSheet_7
+  - first:
+      213: -6648744610465277021
+    second: Emotes_SpriteSheet_8
+  - first:
+      213: 6770421238102296078
+    second: Emotes_SpriteSheet_9
+  - first:
+      213: -9182804793270928212
+    second: Emotes_SpriteSheet_10
+  - first:
+      213: 4020992035181555989
+    second: Emotes_SpriteSheet_11
+  - first:
+      213: -2537402391151475848
+    second: Emotes_SpriteSheet_12
+  - first:
+      213: -1026466071567865604
+    second: Emotes_SpriteSheet_13
+  - first:
+      213: -5075822866996030417
+    second: Emotes_SpriteSheet_14
+  - first:
+      213: 1866645032137131362
+    second: Emotes_SpriteSheet_15
+  - first:
+      213: -2096575140547566682
+    second: Emotes_SpriteSheet_16
+  - first:
+      213: -1300596914301147563
+    second: Emotes_SpriteSheet_17
+  - first:
+      213: 8666073514422018753
+    second: Emotes_SpriteSheet_18
+  - first:
+      213: 5422644306742071517
+    second: Emotes_SpriteSheet_19
+  - first:
+      213: 1126917413313788485
+    second: Emotes_SpriteSheet_20
+  - first:
+      213: -6863414814794062643
+    second: Emotes_SpriteSheet_21
+  - first:
+      213: 4845511923848763110
+    second: Emotes_SpriteSheet_22
+  - first:
+      213: -2875254561190267693
+    second: Emotes_SpriteSheet_23
+  - first:
+      213: 459159640465606775
+    second: Emotes_SpriteSheet_24
+  - first:
+      213: -5906589149675774438
+    second: Emotes_SpriteSheet_25
+  - first:
+      213: 1266952582864016229
+    second: Emotes_SpriteSheet_26
+  - first:
+      213: -8542767041852350085
+    second: Emotes_SpriteSheet_27
+  - first:
+      213: -4490798935318660051
+    second: Emotes_SpriteSheet_28
+  - first:
+      213: 8120914654194809500
+    second: Emotes_SpriteSheet_29
+  - first:
+      213: -2980704952269874182
+    second: Emotes_SpriteSheet_30
+  - first:
+      213: 6823050378657212425
+    second: Emotes_SpriteSheet_31
+  - first:
+      213: -57850380178159318
+    second: Emotes_SpriteSheet_32
+  - first:
+      213: -651556493900525317
+    second: Emotes_SpriteSheet_33
+  - first:
+      213: -2124065729914983786
+    second: Emotes_SpriteSheet_34
+  - first:
+      213: -767612373954699069
+    second: Emotes_SpriteSheet_35
+  - first:
+      213: 3276356987566369445
+    second: Emotes_SpriteSheet_36
+  - first:
+      213: 2812728190573657461
+    second: Emotes_SpriteSheet_37
+  - first:
+      213: -8742906121352423171
+    second: Emotes_SpriteSheet_38
+  - first:
+      213: -4173412496872401660
+    second: Emotes_SpriteSheet_39
+  - first:
+      213: -5121529647291122346
+    second: Emotes_SpriteSheet_40
+  - first:
+      213: 4248244479523746125
+    second: Emotes_SpriteSheet_41
+  - first:
+      213: 102993542207497701
+    second: Emotes_SpriteSheet_42
+  - first:
+      213: 5151422472931283177
+    second: Emotes_SpriteSheet_43
+  - first:
+      213: -6525964955454641208
+    second: Emotes_SpriteSheet_44
+  - first:
+      213: 5362021866326429412
+    second: Emotes_SpriteSheet_45
+  - first:
+      213: 8312753104171531974
+    second: Emotes_SpriteSheet_46
+  - first:
+      213: -1566082668747660143
+    second: Emotes_SpriteSheet_47
+  - first:
+      213: -6735726415459045974
+    second: Emotes_SpriteSheet_48
+  - first:
+      213: 1072295742845492337
+    second: Emotes_SpriteSheet_49
+  - first:
+      213: -7162875845661310801
+    second: Emotes_SpriteSheet_50
+  - first:
+      213: -7888108312854175703
+    second: Emotes_SpriteSheet_51
+  - first:
+      213: -8820189998168047897
+    second: Emotes_SpriteSheet_52
+  - first:
+      213: -5025454915221908335
+    second: Emotes_SpriteSheet_53
+  - first:
+      213: -8968353249743329273
+    second: Emotes_SpriteSheet_54
+  - first:
+      213: -8428740070939428981
+    second: Emotes_SpriteSheet_55
+  - first:
+      213: -510743042534374015
+    second: Emotes_SpriteSheet_56
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 26
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Emotes_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be91074d8f5b97b90800000000000000
+      internalID: -7243558445328098837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emotes_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6ad039b0e5c59910800000000000000
+      internalID: 1843597191448418923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emotes_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b5b166c89f64faf0800000000000000
+      internalID: -363542967956163151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emotes_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5c3e95fd612ad1e0800000000000000
+      internalID: -2172387114096903077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emotes_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7f43c1735ded210800000000000000
+      internalID: 1359758570185619446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emotes_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b1603d63d6f58930800000000000000
+      internalID: 4144990419994829237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emotes_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 539c17785eef5f7d0800000000000000
+      internalID: -2885119724487587531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emotes_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71887c407b1695ca0800000000000000
+      internalID: -6027679187571603433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emotes_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ab9cead00aeab3a0800000000000000
+      internalID: -6648744610465277021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emotes_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0609dcae3e55fd50800000000000000
+      internalID: 6770421238102296078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emotes_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cacf45f61bf109080800000000000000
+      internalID: -9182804793270928212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emotes_SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 511fbada3fe6dc730800000000000000
+      internalID: 4020992035181555989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emotes_SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 873803f08f559ccd0800000000000000
+      internalID: -2537402391151475848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emotes_SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf8e43edb8241c1f0800000000000000
+      internalID: -1026466071567865604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Emotes_SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2495edcefd0f89b0800000000000000
+      internalID: -5075822866996030417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1ed6dd935f906be43b7ba9a90e5b88d0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Emotes_SpriteSheet_0: -7243558445328098837
+      Emotes_SpriteSheet_1: 1843597191448418923
+      Emotes_SpriteSheet_10: -9182804793270928212
+      Emotes_SpriteSheet_11: 4020992035181555989
+      Emotes_SpriteSheet_12: -2537402391151475848
+      Emotes_SpriteSheet_13: -1026466071567865604
+      Emotes_SpriteSheet_14: -5075822866996030417
+      Emotes_SpriteSheet_2: -363542967956163151
+      Emotes_SpriteSheet_3: -2172387114096903077
+      Emotes_SpriteSheet_4: 1359758570185619446
+      Emotes_SpriteSheet_5: 4144990419994829237
+      Emotes_SpriteSheet_6: -2885119724487587531
+      Emotes_SpriteSheet_7: -6027679187571603433
+      Emotes_SpriteSheet_8: -6648744610465277021
+      Emotes_SpriteSheet_9: 6770421238102296078
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

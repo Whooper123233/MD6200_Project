@@ -306,8 +306,8 @@ MonoBehaviour:
   verticalRayCount: 16
   skinWidth: 0.04
   boxCollider: {fileID: 0}
-  maxClimbAngle: 80
-  maxDecendAngle: 75
+  maxClimbAngle: 90
+  maxDecendAngle: 90
   hazardMask:
     serializedVersion: 2
     m_Bits: 128
@@ -352,6 +352,8 @@ MonoBehaviour:
     m_Bits: 64
   currentGrappleArea: {fileID: 0}
   cinemachine: {fileID: 0}
+  lookAheadAmount: 0.1
+  lookAheadTransitionSpeed: 2
   playerMovementStates: {fileID: 3693513819707198257}
 --- !u!120 &4630333989581617390
 LineRenderer:
