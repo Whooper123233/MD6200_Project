@@ -1,25 +1,22 @@
 fileFormatVersion: 2
-guid: 39490ae82df069d4ca9d77812f6d464c
+guid: e519a06220e44e54eb6f870435b69bc3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -433731172075507227
-    second: mainmenulogo-Sheet_0
+      213: -6131277973751139911
+    second: ELR_SpringlLeaf 1_0
   - first:
-      213: 6600226205880999137
-    second: mainmenulogo-Sheet_1
+      213: -5355083945682484026
+    second: ELR_SpringlLeaf 1_1
   - first:
-      213: 7163175641897992985
-    second: mainmenulogo-Sheet_2
+      213: -1535802191644514329
+    second: ELR_SpringlLeaf 1_2
   - first:
-      213: -6505533036988284209
-    second: mainmenulogo-Sheet_3
+      213: -243548371532859678
+    second: ELR_SpringlLeaf 1_3
   - first:
-      213: -2802724979073342942
-    second: mainmenulogo-Sheet_4
-  - first:
-      213: 2708071012198052660
-    second: mainmenulogo-Sheet_5
+      213: 7559080750898351605
+    second: ELR_SpringlLeaf 1_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -66,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 12
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mainmenulogo-Sheet_0
+      name: ELR_SpringlLeaf 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 96
-        height: 66
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e1fc680cc31bf9f0800000000000000
-      internalID: -433731172075507227
+      spriteID: 9b1f263fa2359eaa0800000000000000
+      internalID: -6131277973751139911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mainmenulogo-Sheet_1
+      name: ELR_SpringlLeaf 1_1
       rect:
         serializedVersion: 2
-        x: 96
+        x: 16
         y: 0
-        width: 96
-        height: 66
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ecd2c6c3c6b89b50800000000000000
-      internalID: 6600226205880999137
+      spriteID: 6c4c23b168beea5b0800000000000000
+      internalID: -5355083945682484026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mainmenulogo-Sheet_2
+      name: ELR_SpringlLeaf 1_2
       rect:
         serializedVersion: 2
-        x: 192
+        x: 32
         y: 0
-        width: 96
-        height: 66
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9138f0f4b46b86360800000000000000
-      internalID: 7163175641897992985
+      spriteID: 7e723c13b0cbfaae0800000000000000
+      internalID: -1535802191644514329
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mainmenulogo-Sheet_3
+      name: ELR_SpringlLeaf 1_3
       rect:
         serializedVersion: 2
-        x: 288
+        x: 48
         y: 0
-        width: 96
-        height: 66
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,8 +193,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fc2cebfab24b7b5a0800000000000000
-      internalID: -6505533036988284209
+      spriteID: 2e6b825eb0ebe9cf0800000000000000
+      internalID: -243548371532859678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELR_SpringlLeaf 1_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fd0ac9a4ef37e860800000000000000
+      internalID: 7559080750898351605
       vertices: []
       indices: 
       edges: []
@@ -206,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3dd4d3bbc2bab2443b4696de6f087bc6
+    spriteID: 15d07e7bfd9ca054089fa99f90ae2569
     internalID: 0
     vertices: []
     indices: 
@@ -216,12 +235,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":66.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      mainmenulogo-Sheet_0: -433731172075507227
-      mainmenulogo-Sheet_1: 6600226205880999137
-      mainmenulogo-Sheet_2: 7163175641897992985
-      mainmenulogo-Sheet_3: -6505533036988284209
+      ELR_SpringlLeaf 1_0: -6131277973751139911
+      ELR_SpringlLeaf 1_1: -5355083945682484026
+      ELR_SpringlLeaf 1_2: -1535802191644514329
+      ELR_SpringlLeaf 1_3: -243548371532859678
+      ELR_SpringlLeaf 1_4: 7559080750898351605
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
