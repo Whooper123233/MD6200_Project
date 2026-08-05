@@ -50,14 +50,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("Camera")]
     [SerializeField] private CinemachineCamera cinemachine;
     private CinemachinePositionComposer positionComposer;
-    [SerializeField] private float lookAheadAmount = 0.15f; 
-    [SerializeField] private float lookAheadTransitionSpeed = 3f;
-    private float currentLookAheadX;
 
     [SerializeField] private PlayerMovementStates playerMovementStates;
 
-    [Header("Audio")]
-    [SerializeField] private AudioManager audioManager;
     void Start()
     {     
         controller = GetComponent<Controller2D>();
@@ -82,7 +77,6 @@ public class PlayerMovement : MonoBehaviour
         UpdateFacing(input);
         transform.localScale = new Vector3(facingDir, 1f, 1f);
         UpdateCameraDamping();
-        UpdateCameraLookAhead();
 
         if (Input.GetMouseButtonDown(0) && currentGrappleArea != null)
         {
@@ -158,7 +152,6 @@ public class PlayerMovement : MonoBehaviour
         StopBouncing();
         StopBouncingX();
         CheckInteraction();
-        UpdateRunningAudio();
     }
     void HandleDash(Vector2 input)
     {
@@ -398,27 +391,5 @@ public class PlayerMovement : MonoBehaviour
         }
 
         positionComposer.Damping.y = Mathf.Lerp(positionComposer.Damping.y,targetDamping,dampingTransitionSpeed * Time.deltaTime);
-    }
-    void UpdateCameraLookAhead()
-    {
-        if (positionComposer == null) return;
-
-        float targetLookAheadX = -facingDir * lookAheadAmount;
-
-        currentLookAheadX = Mathf.Lerp(currentLookAheadX, targetLookAheadX, lookAheadTransitionSpeed * Time.deltaTime);
-
-        Vector2 screenPos = positionComposer.Composition.ScreenPosition;
-        screenPos.x = currentLookAheadX;
-        positionComposer.Composition.ScreenPosition = screenPos;
-    }
-    void UpdateRunningAudio()
-    {
-        if (audioManager == null) return;
-        bool isRunning = controller.collsionInfo.below && !_isDashing && Mathf.Abs(_velocity.x) > 0.1f;
-
-        if (isRunning)
-            audioManager.PlayLoop(audioManager.running);
-        else
-            audioManager.StopLoop();
     }
 }

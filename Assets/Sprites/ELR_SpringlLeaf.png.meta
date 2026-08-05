@@ -1,13 +1,22 @@
 fileFormatVersion: 2
-guid: abc9aa2be9306d646b33ee110314c032
+guid: e519a06220e44e54eb6f870435b69bc3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6486810334235780535
-    second: Grapple_SpriteSheet_0
+      213: -6131277973751139911
+    second: ELR_SpringlLeaf 1_0
   - first:
-      213: -2052347034754579474
-    second: Grapple_SpriteSheet_1
+      213: -5355083945682484026
+    second: ELR_SpringlLeaf 1_1
+  - first:
+      213: -1535802191644514329
+    second: ELR_SpringlLeaf 1_2
+  - first:
+      213: -243548371532859678
+    second: ELR_SpringlLeaf 1_3
+  - first:
+      213: 7559080750898351605
+    second: ELR_SpringlLeaf 1_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 19
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grapple_SpriteSheet_0
+      name: ELR_SpringlLeaf 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 94a1b8e9e583af5a0800000000000000
-      internalID: -6486810334235780535
+      spriteID: 9b1f263fa2359eaa0800000000000000
+      internalID: -6131277973751139911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grapple_SpriteSheet_1
+      name: ELR_SpringlLeaf 1_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 16
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +149,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee380a5ee399483e0800000000000000
-      internalID: -2052347034754579474
+      spriteID: 6c4c23b168beea5b0800000000000000
+      internalID: -5355083945682484026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELR_SpringlLeaf 1_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e723c13b0cbfaae0800000000000000
+      internalID: -1535802191644514329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELR_SpringlLeaf 1_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e6b825eb0ebe9cf0800000000000000
+      internalID: -243548371532859678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ELR_SpringlLeaf 1_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fd0ac9a4ef37e860800000000000000
+      internalID: 7559080750898351605
       vertices: []
       indices: 
       edges: []
@@ -150,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ea190144f11b05f4b9c23d41e90866e1
+    spriteID: 15d07e7bfd9ca054089fa99f90ae2569
     internalID: 0
     vertices: []
     indices: 
@@ -160,10 +235,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Grapple_SpriteSheet_0: -6486810334235780535
-      Grapple_SpriteSheet_1: -2052347034754579474
+      ELR_SpringlLeaf 1_0: -6131277973751139911
+      ELR_SpringlLeaf 1_1: -5355083945682484026
+      ELR_SpringlLeaf 1_2: -1535802191644514329
+      ELR_SpringlLeaf 1_3: -243548371532859678
+      ELR_SpringlLeaf 1_4: 7559080750898351605
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -11,8 +11,7 @@ public class PlayerMovementStates : MonoBehaviour
         wallJump,
         falling,
         wallSlide,
-        dashing,
-        swinging
+        dashing
     }
 
     public MoveState currentMoveState {  get; private set; }
@@ -25,12 +24,9 @@ public class PlayerMovementStates : MonoBehaviour
     private const string fallAnim = "Falling";
     private const string wallSlideAnim = "WallSlide";
     private const string dashAnim = "Dashing";
-    private const string swingAnim = "Swinging";
-
 
     public static Action<MoveState> OnPlayerMoveStateChanged;
     private PlayerMovement playerMovement;
-    [SerializeField] public AudioManager audioManager;
     private void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
@@ -48,10 +44,6 @@ public class PlayerMovementStates : MonoBehaviour
         else if (playerMovement._justWallJumped)
         {
             SetMoveState(MoveState.wallJump);
-        }
-        else if (playerMovement.isSwinging)
-        {
-            SetMoveState(MoveState.swinging);
         }
         else if (playerMovement._velocity.y > 0.01f)
         {
@@ -83,7 +75,6 @@ public class PlayerMovementStates : MonoBehaviour
             case MoveState.run:
                 HandleRun();
 
-
                 break;
             case MoveState.jump:
                 HandleJump();
@@ -105,10 +96,6 @@ public class PlayerMovementStates : MonoBehaviour
                 HandleDashing();
 
                 break;
-            case MoveState.swinging:
-                HandleSwinging();
-
-                break;
             default:
                 Debug.LogError($"Invalid Movestate: {moveState}");
                 break;
@@ -125,7 +112,6 @@ public class PlayerMovementStates : MonoBehaviour
     private void HandleRun()
     {
         animator.Play(runAnim);
-
         //Debug.Log("RUN ANI PLAYING");
 
     }
@@ -160,12 +146,6 @@ public class PlayerMovementStates : MonoBehaviour
         animator.Play(dashAnim);
         Debug.Log("DASH ANI PLAYING");
 
-
-    }
-    private void HandleSwinging()
-    {
-        animator.Play(swingAnim);
-        //Debug.Log("SWING ANI PLAYING");
 
     }
 }
