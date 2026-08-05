@@ -56,6 +56,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private PlayerMovementStates playerMovementStates;
 
+    [Header("Audio")]
+    [SerializeField] private AudioManager audioManager;
     void Start()
     {     
         controller = GetComponent<Controller2D>();
@@ -156,6 +158,7 @@ public class PlayerMovement : MonoBehaviour
         StopBouncing();
         StopBouncingX();
         CheckInteraction();
+        UpdateRunningAudio();
     }
     void HandleDash(Vector2 input)
     {
@@ -407,5 +410,14 @@ public class PlayerMovement : MonoBehaviour
         Vector2 screenPos = positionComposer.Composition.ScreenPosition;
         screenPos.x = currentLookAheadX;
         positionComposer.Composition.ScreenPosition = screenPos;
+    }
+    void UpdateRunningAudio()
+    {
+        bool isRunning = controller.collsionInfo.below && !_isDashing && Mathf.Abs(_velocity.x) > 0.1f;
+
+        if (isRunning)
+            audioManager.PlayLoop(audioManager.running);
+        else
+            audioManager.StopLoop();
     }
 }

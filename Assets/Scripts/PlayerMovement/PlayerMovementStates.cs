@@ -30,6 +30,7 @@ public class PlayerMovementStates : MonoBehaviour
 
     public static Action<MoveState> OnPlayerMoveStateChanged;
     private PlayerMovement playerMovement;
+    [SerializeField] public AudioManager audioManager;
     private void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
@@ -82,6 +83,7 @@ public class PlayerMovementStates : MonoBehaviour
             case MoveState.run:
                 HandleRun();
 
+
                 break;
             case MoveState.jump:
                 HandleJump();
@@ -123,6 +125,7 @@ public class PlayerMovementStates : MonoBehaviour
     private void HandleRun()
     {
         animator.Play(runAnim);
+
         //Debug.Log("RUN ANI PLAYING");
 
     }
