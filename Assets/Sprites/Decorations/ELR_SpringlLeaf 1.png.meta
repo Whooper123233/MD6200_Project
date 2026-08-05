@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 03f1ff8ee7aef134ea22b5295778fce7
+guid: e519a06220e44e54eb6f870435b69bc3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3075321283680775495
-    second: ELR_SpringlLeaf_0
+      213: -6131277973751139911
+    second: ELR_SpringlLeaf 1_0
   - first:
-      213: 7421867485779905927
-    second: ELR_SpringlLeaf_1
+      213: -5355083945682484026
+    second: ELR_SpringlLeaf 1_1
   - first:
-      213: 5891598528820585769
-    second: ELR_SpringlLeaf_2
+      213: -1535802191644514329
+    second: ELR_SpringlLeaf 1_2
   - first:
-      213: -6800149282209211914
-    second: ELR_SpringlLeaf_3
+      213: -243548371532859678
+    second: ELR_SpringlLeaf 1_3
   - first:
-      213: -9086752253592823719
-    second: ELR_SpringlLeaf_4
+      213: 7559080750898351605
+    second: ELR_SpringlLeaf 1_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,7 +112,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ELR_SpringlLeaf_0
+      name: ELR_SpringlLeaf 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -127,14 +127,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b2520416934255d0800000000000000
-      internalID: -3075321283680775495
+      spriteID: 9b1f263fa2359eaa0800000000000000
+      internalID: -6131277973751139911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ELR_SpringlLeaf_1
+      name: ELR_SpringlLeaf 1_1
       rect:
         serializedVersion: 2
         x: 16
@@ -149,14 +149,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 78dcee3d725cff660800000000000000
-      internalID: 7421867485779905927
+      spriteID: 6c4c23b168beea5b0800000000000000
+      internalID: -5355083945682484026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ELR_SpringlLeaf_2
+      name: ELR_SpringlLeaf 1_2
       rect:
         serializedVersion: 2
         x: 32
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 925a09d95a923c150800000000000000
-      internalID: 5891598528820585769
+      spriteID: 7e723c13b0cbfaae0800000000000000
+      internalID: -1535802191644514329
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ELR_SpringlLeaf_3
+      name: ELR_SpringlLeaf 1_3
       rect:
         serializedVersion: 2
         x: 48
@@ -193,14 +193,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f9da4ea14401a1a0800000000000000
-      internalID: -6800149282209211914
+      spriteID: 2e6b825eb0ebe9cf0800000000000000
+      internalID: -243548371532859678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ELR_SpringlLeaf_4
+      name: ELR_SpringlLeaf 1_4
       rect:
         serializedVersion: 2
         x: 64
@@ -215,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9589e9218fe55e180800000000000000
-      internalID: -9086752253592823719
+      spriteID: 5fd0ac9a4ef37e860800000000000000
+      internalID: 7559080750898351605
       vertices: []
       indices: 
       edges: []
@@ -225,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 55bf09e3b3ee96440b1d144f83e3207f
+    spriteID: 15d07e7bfd9ca054089fa99f90ae2569
     internalID: 0
     vertices: []
     indices: 
@@ -237,11 +237,11 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ELR_SpringlLeaf_0: -3075321283680775495
-      ELR_SpringlLeaf_1: 7421867485779905927
-      ELR_SpringlLeaf_2: 5891598528820585769
-      ELR_SpringlLeaf_3: -6800149282209211914
-      ELR_SpringlLeaf_4: -9086752253592823719
+      ELR_SpringlLeaf 1_0: -6131277973751139911
+      ELR_SpringlLeaf 1_1: -5355083945682484026
+      ELR_SpringlLeaf 1_2: -1535802191644514329
+      ELR_SpringlLeaf 1_3: -243548371532859678
+      ELR_SpringlLeaf 1_4: 7559080750898351605
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
