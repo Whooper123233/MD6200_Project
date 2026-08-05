@@ -413,6 +413,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void UpdateRunningAudio()
     {
+        if (audioManager == null) return;
         bool isRunning = controller.collsionInfo.below && !_isDashing && Mathf.Abs(_velocity.x) > 0.1f;
 
         if (isRunning)
