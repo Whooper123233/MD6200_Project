@@ -115,23 +115,21 @@ public class Controller2D : RaycastController
                 Debug.DrawRay(rayOriginOpp, Vector2.right * -dirX * oppRayLength, Color.cyan);
                 if (oppHit)
                 {
-                    float oppDistance = Mathf.Max(oppHit.distance - skinWidth, 0f);
+                    float oppSlopeAngle = Vector2.Angle(oppHit.normal, Vector2.up);
+                    if (oppSlopeAngle > maxClimbAngle) 
+                    {
+                        float oppDistance = Mathf.Max(oppHit.distance - skinWidth, 0f);
 
-                    if (-dirX < 0 && velocity.x < -oppDistance)
-                    {
-                        velocity.x = -oppDistance;
-                    }
-                    else if (-dirX > 0 && velocity.x > oppDistance)
-                    {
-                        velocity.x = oppDistance;
-                    }
-                    if (dirX == -1)
-                    {
-                        collsionInfo.right = true;
-                    }
-                    else
-                    {
-                        collsionInfo.left = true;
+                        if (-dirX < 0 && velocity.x < -oppDistance)
+                        {
+                            velocity.x = -oppDistance;
+                        }
+                        else if (-dirX > 0 && velocity.x > oppDistance)
+                        {
+                            velocity.x = oppDistance;
+                        }
+                        if (dirX == -1) collsionInfo.right = true;
+                        else collsionInfo.left = true;
                     }
                 }
                 CheckHazard(rayOriginOpp, Vector2.right * -dirX, oppRayLength);
@@ -188,16 +186,15 @@ public class Controller2D : RaycastController
     {
         float moveDistance = Mathf.Abs(velocity.x);
         float climbVelocityY = Mathf.Sin(slopeAngle * Mathf.Deg2Rad) * moveDistance;
-        if (velocity.y <= climbVelocityY) 
+        if (velocity.y <= climbVelocityY)
         {
             velocity.y = climbVelocityY;
-            velocity.x = Mathf.Sin(slopeAngle * Mathf.Deg2Rad) * moveDistance * Mathf.Sign(velocity.x);
+            velocity.x = Mathf.Cos(slopeAngle * Mathf.Deg2Rad) * moveDistance * Mathf.Sign(velocity.x); 
             collsionInfo.below = true;
             collsionInfo.climbingSlop = true;
             collsionInfo.slopAngle = slopeAngle;
         }
     }
-
     void DecendSlope(ref Vector3 velocity)
     {
         float dirX = Mathf.Sign(velocity.x);

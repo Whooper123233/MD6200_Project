@@ -1,0 +1,974 @@
+fileFormatVersion: 2
+guid: 45c69ff67d73b314b9a7304128ba131f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6124041623477144464
+    second: mcsprite_witheffects-Shee1000t_0
+  - first:
+      213: 1363232511057469984
+    second: mcsprite_witheffects-Shee1000t_1
+  - first:
+      213: 6297323032410715037
+    second: mcsprite_witheffects-Shee1000t_2
+  - first:
+      213: 3640983181851780130
+    second: mcsprite_witheffects-Shee1000t_3
+  - first:
+      213: 8097853735959388436
+    second: mcsprite_witheffects-Shee1000t_4
+  - first:
+      213: 3816349268785351997
+    second: mcsprite_witheffects-Shee1000t_5
+  - first:
+      213: -2378429979557406480
+    second: mcsprite_witheffects-Shee1000t_6
+  - first:
+      213: 5665778359433761740
+    second: mcsprite_witheffects-Shee1000t_7
+  - first:
+      213: 4493931257317287075
+    second: mcsprite_witheffects-Shee1000t_8
+  - first:
+      213: 8905544048575687605
+    second: mcsprite_witheffects-Shee1000t_9
+  - first:
+      213: 4289250796158248640
+    second: mcsprite_witheffects-Shee1000t_10
+  - first:
+      213: 3427724870269653821
+    second: mcsprite_witheffects-Shee1000t_11
+  - first:
+      213: 4084182519638224312
+    second: mcsprite_witheffects-Shee1000t_12
+  - first:
+      213: -4403538598488509098
+    second: mcsprite_witheffects-Shee1000t_13
+  - first:
+      213: -960403947458856201
+    second: mcsprite_witheffects-Shee1000t_14
+  - first:
+      213: -1084256024860456291
+    second: mcsprite_witheffects-Shee1000t_15
+  - first:
+      213: 7275496110949644300
+    second: mcsprite_witheffects-Shee1000t_16
+  - first:
+      213: -8949525303189154552
+    second: mcsprite_witheffects-Shee1000t_17
+  - first:
+      213: -653844278653063404
+    second: mcsprite_witheffects-Shee1000t_18
+  - first:
+      213: 3518696870217335923
+    second: mcsprite_witheffects-Shee1000t_19
+  - first:
+      213: 8369558547391635500
+    second: mcsprite_witheffects-Shee1000t_20
+  - first:
+      213: -2785054323198246045
+    second: mcsprite_witheffects-Shee1000t_21
+  - first:
+      213: -5019843785702865874
+    second: mcsprite_witheffects-Shee1000t_22
+  - first:
+      213: 730032634245368630
+    second: mcsprite_witheffects-Shee1000t_23
+  - first:
+      213: -4081566168559788499
+    second: mcsprite_witheffects-Shee1000t_24
+  - first:
+      213: 5931639018529372353
+    second: mcsprite_witheffects-Shee1000t_25
+  - first:
+      213: -7584873452138077430
+    second: mcsprite_witheffects-Shee1000t_26
+  - first:
+      213: 2714136858227073128
+    second: mcsprite_witheffects-Shee1000t_27
+  - first:
+      213: 6027226396321950995
+    second: mcsprite_witheffects-Shee1000t_28
+  - first:
+      213: -1773724848846940500
+    second: mcsprite_witheffects-Shee1000t_29
+  - first:
+      213: -5753464057338143755
+    second: mcsprite_witheffects-Shee1000t_30
+  - first:
+      213: -2984448250524016688
+    second: mcsprite_witheffects-Shee1000t_31
+  - first:
+      213: -651378658805295255
+    second: mcsprite_witheffects-Shee1000t_32
+  - first:
+      213: -4712870780370321613
+    second: mcsprite_witheffects-Shee1000t_33
+  - first:
+      213: -2191681391336663235
+    second: mcsprite_witheffects-Shee1000t_34
+  - first:
+      213: 8507089503200884053
+    second: mcsprite_witheffects-Shee1000t_35
+  - first:
+      213: 2337613360004691776
+    second: mcsprite_witheffects-Shee1000t_36
+  - first:
+      213: 3974268858214960613
+    second: mcsprite_witheffects-Shee1000t_37
+  - first:
+      213: 2248783769423916122
+    second: mcsprite_witheffects-Shee1000t_38
+  - first:
+      213: -8579353442319131579
+    second: mcsprite_witheffects-Shee1000t_39
+  - first:
+      213: -1521120423658372405
+    second: mcsprite_witheffects-Shee1000t_40
+  - first:
+      213: -1208339649986375776
+    second: mcsprite_witheffects-Shee1000t_41
+  - first:
+      213: -4662973813383538484
+    second: mcsprite_witheffects-Shee1000t_42
+  - first:
+      213: 5796965440655584981
+    second: mcsprite_witheffects-Shee1000t_43
+  - first:
+      213: -7460360112694197613
+    second: mcsprite_witheffects-Shee1000t_44
+  - first:
+      213: 4075048437734556937
+    second: mcsprite_witheffects-Shee1000t_45
+  - first:
+      213: 5514353653224069395
+    second: mcsprite_witheffects-Shee1000t_46
+  - first:
+      213: -6823089817938785322
+    second: mcsprite_witheffects-Shee1000t_47
+  - first:
+      213: -3612102145700453598
+    second: mcsprite_witheffects-Shee1000t_48
+  - first:
+      213: -8125833668678229283
+    second: mcsprite_witheffects-Shee1000t_49
+  - first:
+      213: -2111780394809520149
+    second: mcsprite_witheffects-Shee1000t_50
+  - first:
+      213: 9056744514835540470
+    second: mcsprite_witheffects-Shee1000t_51
+  - first:
+      213: 7760515888475350871
+    second: mcsprite_witheffects-Shee1000t_52
+  - first:
+      213: 2279537530551069248
+    second: mcsprite_witheffects-Shee1000t_53
+  - first:
+      213: 5010955173965266900
+    second: mcsprite_witheffects-Shee1000t_54
+  - first:
+      213: 902780083257810346
+    second: mcsprite_witheffects-Shee1000t_55
+  - first:
+      213: 7794851886419600864
+    second: mcsprite_witheffects-Shee1000t_56
+  - first:
+      213: 1634612119436317507
+    second: mcsprite_witheffects-Shee1000t_57
+  - first:
+      213: -3478826620424488027
+    second: mcsprite_witheffects-Shee1000t_58
+  - first:
+      213: -2603451093740872221
+    second: mcsprite_witheffects-Shee1000t_59
+  - first:
+      213: 6095923686934998851
+    second: mcsprite_witheffects-Shee1000t_60
+  - first:
+      213: -3443944991016480233
+    second: mcsprite_witheffects-Shee1000t_61
+  - first:
+      213: -2781767375931209638
+    second: mcsprite_witheffects-Shee1000t_62
+  - first:
+      213: 3217581620510326892
+    second: mcsprite_witheffects-Shee1000t_63
+  - first:
+      213: -1094299026032638786
+    second: mcsprite_witheffects-Shee1000t_64
+  - first:
+      213: 5110941050899533965
+    second: mcsprite_witheffects-Shee1000t_65
+  - first:
+      213: -2311079063531471512
+    second: mcsprite_witheffects-Shee1000t_66
+  - first:
+      213: 6108814718187553219
+    second: mcsprite_witheffects-Shee1000t_67
+  - first:
+      213: -3622534698762786823
+    second: mcsprite_witheffects-Shee1000t_68
+  - first:
+      213: -4621675056946448707
+    second: mcsprite_witheffects-Shee1000t_69
+  - first:
+      213: 2105025181444068430
+    second: mcsprite_witheffects-Shee1000t_70
+  - first:
+      213: 5565414749628183771
+    second: mcsprite_witheffects-Shee1000t_71
+  - first:
+      213: 6460272255264702941
+    second: mcsprite_witheffects-Shee1000t_72
+  - first:
+      213: -2344808957564770057
+    second: mcsprite_witheffects-Shee1000t_73
+  - first:
+      213: -4152942749672543982
+    second: mcsprite_witheffects-Shee1000t_74
+  - first:
+      213: 7361875170926150076
+    second: mcsprite_witheffects-Shee1000t_75
+  - first:
+      213: -2595314967957781817
+    second: mcsprite_witheffects-Shee1000t_76
+  - first:
+      213: -5251997281433310499
+    second: mcsprite_witheffects-Shee1000t_77
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07430fa0798030ba0800000000000000
+      internalID: -6124041623477144464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1280
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02228dffebc2be210800000000000000
+      internalID: 1363232511057469984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_2
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1280
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d93f9beeee5946750800000000000000
+      internalID: 6297323032410715037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_3
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1280
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2246273c9ee578230800000000000000
+      internalID: 3640983181851780130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 411edee811b516070800000000000000
+      internalID: 8097853735959388436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 960
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3dc5c8a07566f430800000000000000
+      internalID: 3816349268785351997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_6
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 960
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f85759f88e1efed0800000000000000
+      internalID: -2378429979557406480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_7
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 960
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc3152a3663e0ae40800000000000000
+      internalID: 5665778359433761740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_8
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 960
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a4eb6d2ba6ad5e30800000000000000
+      internalID: 4493931257317287075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_9
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 960
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bba2fae029d69b70800000000000000
+      internalID: 8905544048575687605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c6e299afda768b30800000000000000
+      internalID: 4289250796158248640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_11
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 640
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d33d130db99b19f20800000000000000
+      internalID: 3427724870269653821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_12
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 640
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bd65e8dc5eeda830800000000000000
+      internalID: 4084182519638224312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_13
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 640
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 655fe52c9fc73e2c0800000000000000
+      internalID: -4403538598488509098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_14
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 640
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7faf4deb2b5fba2f0800000000000000
+      internalID: -960403947458856201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_15
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 640
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9a8d98d3e2f3f0f0800000000000000
+      internalID: -1084256024860456291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c08b3e96a21c7f460800000000000000
+      internalID: 7275496110949644300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_17
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 320
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8055a034726ecc380800000000000000
+      internalID: -8949525303189154552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_18
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 320
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41f6670c7141de6f0800000000000000
+      internalID: -653844278653063404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_19
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 320
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 374459d192ce4d030800000000000000
+      internalID: 3518696870217335923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_20
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 320
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c20ec10b725a62470800000000000000
+      internalID: 8369558547391635500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_21
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 320
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3634a9159df7959d0800000000000000
+      internalID: -2785054323198246045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e248a355caee55ab0800000000000000
+      internalID: -5019843785702865874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_23
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63b43ae10d8912a00800000000000000
+      internalID: 730032634245368630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_24
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2eddbbd13d5b57c0800000000000000
+      internalID: -4081566168559788499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_25
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c83a4b924a615250800000000000000
+      internalID: 5931639018529372353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mcsprite_witheffects-Shee1000t_26
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 640
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a03e40b18cd1db690800000000000000
+      internalID: -7584873452138077430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: aa649682fc3101940b77a0b50de3966d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":640.0,"y":320.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      mcsprite_witheffects-Shee1000t_0: -6124041623477144464
+      mcsprite_witheffects-Shee1000t_1: 1363232511057469984
+      mcsprite_witheffects-Shee1000t_10: 4289250796158248640
+      mcsprite_witheffects-Shee1000t_11: 3427724870269653821
+      mcsprite_witheffects-Shee1000t_12: 4084182519638224312
+      mcsprite_witheffects-Shee1000t_13: -4403538598488509098
+      mcsprite_witheffects-Shee1000t_14: -960403947458856201
+      mcsprite_witheffects-Shee1000t_15: -1084256024860456291
+      mcsprite_witheffects-Shee1000t_16: 7275496110949644300
+      mcsprite_witheffects-Shee1000t_17: -8949525303189154552
+      mcsprite_witheffects-Shee1000t_18: -653844278653063404
+      mcsprite_witheffects-Shee1000t_19: 3518696870217335923
+      mcsprite_witheffects-Shee1000t_2: 6297323032410715037
+      mcsprite_witheffects-Shee1000t_20: 8369558547391635500
+      mcsprite_witheffects-Shee1000t_21: -2785054323198246045
+      mcsprite_witheffects-Shee1000t_22: -5019843785702865874
+      mcsprite_witheffects-Shee1000t_23: 730032634245368630
+      mcsprite_witheffects-Shee1000t_24: -4081566168559788499
+      mcsprite_witheffects-Shee1000t_25: 5931639018529372353
+      mcsprite_witheffects-Shee1000t_26: -7584873452138077430
+      mcsprite_witheffects-Shee1000t_3: 3640983181851780130
+      mcsprite_witheffects-Shee1000t_4: 8097853735959388436
+      mcsprite_witheffects-Shee1000t_5: 3816349268785351997
+      mcsprite_witheffects-Shee1000t_6: -2378429979557406480
+      mcsprite_witheffects-Shee1000t_7: 5665778359433761740
+      mcsprite_witheffects-Shee1000t_8: 4493931257317287075
+      mcsprite_witheffects-Shee1000t_9: 8905544048575687605
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
