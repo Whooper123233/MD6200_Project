@@ -9,13 +9,18 @@ public class LevelSaveData
     public string levelId;
     public bool isUnlocked;
     public bool isCompleted;
-    public List<int> collectedGemIds = new List<int>(); 
+    public List<int> collectedGemIds = new List<int>();
 }
 
+[Serializable]
 public class SaveData
 {
     public List<LevelSaveData> levels = new List<LevelSaveData>();
+    public bool hasSeenIntroCutscene;
+    public string lastScene;
+    public string returnScene; // where to go back to after visiting the options/menu screen
 }
+
 public class SaveManager : MonoBehaviour
 {
     public static SaveManager Instance;
@@ -87,5 +92,23 @@ public class SaveManager : MonoBehaviour
         {
             data = new SaveData();
         }
+    }
+
+    public void SetIntroCutsceneSeen()
+    {
+        data.hasSeenIntroCutscene = true;
+        Save();
+    }
+
+    public void SetLastScene(string sceneName)
+    {
+        data.lastScene = sceneName;
+        Save();
+    }
+
+    public void SetReturnScene(string sceneName)
+    {
+        data.returnScene = sceneName;
+        Save();
     }
 }

@@ -19,6 +19,10 @@ public class LevelManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
+        else
+        {
+            Destroy(gameObject); 
+        }
     }
 
     public void LoadScene(string sceneName)

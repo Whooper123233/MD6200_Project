@@ -2,8 +2,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class StartMenuController : MonoBehaviour
 {
+    [SerializeField] private string cutsceneSceneName;
+    [SerializeField] private string firstLevelSceneName; 
+
     public void PlayTestLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        var save = SaveManager.Instance.data;
+
+        if (save.hasSeenIntroCutscene)
+        {
+            string target = string.IsNullOrEmpty(save.lastScene) ? firstLevelSceneName : save.lastScene;
+            LevelManager.Instance.LoadScene(target);
+        }
+        else
+        {
+            LevelManager.Instance.LoadScene(cutsceneSceneName);
+        }
     }
 }
