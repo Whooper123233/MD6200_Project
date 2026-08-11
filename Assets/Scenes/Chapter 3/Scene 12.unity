@@ -8761,6 +8761,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9112266497999957744, guid: fadeb01b8b242c3418f73511c5a76fdc, type: 3}
   m_PrefabInstance: {fileID: 763716351}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &763716354 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6387121740944008093, guid: fadeb01b8b242c3418f73511c5a76fdc, type: 3}
+  m_PrefabInstance: {fileID: 763716351}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &802889249
 GameObject:
   m_ObjectHideFlags: 0
@@ -10854,7 +10865,7 @@ PrefabInstance:
     - target: {fileID: 4519228736121491552, guid: b00788de09a1ee249ae8753c1d532d57, type: 3}
       propertyPath: fireflyText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 763716354}
     - target: {fileID: 5532453444348999027, guid: b00788de09a1ee249ae8753c1d532d57, type: 3}
       propertyPath: m_LocalPosition.x
       value: -51.892097
