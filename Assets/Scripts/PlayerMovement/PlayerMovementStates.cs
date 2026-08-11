@@ -158,7 +158,7 @@ public class PlayerMovementStates : MonoBehaviour
     private void HandleDashing()
     {
         animator.Play(dashAnim);
-        Debug.Log("DASH ANI PLAYING");
+        //Debug.Log("DASH ANI PLAYING");
 
 
     }
