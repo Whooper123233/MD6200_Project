@@ -30058,6 +30058,14 @@ PrefabInstance:
       propertyPath: currentLevel
       value: 
       objectReference: {fileID: 11400000, guid: 261070c0ed6a3024ea8544a1e3084e67, type: 2}
+    - target: {fileID: 6462103966631693437, guid: 4f7c79e040fb6274398df30e27b661e7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 32.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6462103966631693437, guid: 4f7c79e040fb6274398df30e27b661e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
