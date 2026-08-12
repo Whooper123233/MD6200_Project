@@ -354,7 +354,7 @@ MonoBehaviour:
   currentGrappleArea: {fileID: 0}
   cinemachine: {fileID: 0}
   lookAheadAmount: 0.2
-  lookAheadTransitionSpeed: 0.8
+  lookAheadTransitionSpeed: 0.6
   playerMovementStates: {fileID: 3693513819707198257}
   audioManager: {fileID: 0}
 --- !u!120 &4630333989581617390
