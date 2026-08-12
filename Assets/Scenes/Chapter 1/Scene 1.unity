@@ -1533,11 +1533,11 @@ PrefabInstance:
       objectReference: {fileID: 942033268}
     - target: {fileID: 2582408690784938388, guid: df614f1913995c245aeffe6077db7926, type: 3}
       propertyPath: lookAheadAmount
-      value: 0.4
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2582408690784938388, guid: df614f1913995c245aeffe6077db7926, type: 3}
       propertyPath: lookAheadTransitionSpeed
-      value: 0.8
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 2967238087251450681, guid: df614f1913995c245aeffe6077db7926, type: 3}
       propertyPath: m_Name
