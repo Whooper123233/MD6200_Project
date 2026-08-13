@@ -3,20 +3,19 @@ using UnityEngine.SceneManagement;
 public class StartMenuController : MonoBehaviour
 {
     [SerializeField] private string cutsceneSceneName;
-    [SerializeField] private string firstLevelSceneName; 
+    [SerializeField] private string firstLevelSceneName;
 
-    public void PlayTestLevel()
+    public void StartNewGame()
+    {
+        SaveManager.Instance.StartNewGame(); 
+        LevelManager.Instance.LoadScene(cutsceneSceneName);
+    }
+
+    public void ContinueGame()
     {
         var save = SaveManager.Instance.data;
-
-        if (save.hasSeenIntroCutscene)
-        {
-            string target = string.IsNullOrEmpty(save.lastScene) ? firstLevelSceneName : save.lastScene;
-            LevelManager.Instance.LoadScene(target);
-        }
-        else
-        {
-            LevelManager.Instance.LoadScene(cutsceneSceneName);
-        }
+        string target = string.IsNullOrEmpty(save.lastScene) ? firstLevelSceneName : save.lastScene;
+        LevelManager.Instance.LoadScene(target);
     }
 }
+

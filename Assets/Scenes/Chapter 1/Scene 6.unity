@@ -8343,7 +8343,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: a5d52a98bf632b6428ca07c23239ae6c, type: 2}
     - target: {fileID: 4329368360961423373, guid: 4f7c79e040fb6274398df30e27b661e7, type: 3}
       propertyPath: sceneName
-      value: Scene 6
+      value: Scene 7
       objectReference: {fileID: 0}
     - target: {fileID: 4329368360961423373, guid: 4f7c79e040fb6274398df30e27b661e7, type: 3}
       propertyPath: currentLevel
@@ -12798,33 +12798,33 @@ CompositeCollider2D:
   - m_Collider: {fileID: 552412541}
     m_ColliderPaths:
     - - X: 735077760
-        Y: 115361560
+        Y: 437741856
       - X: 77387088
-        Y: 115361560
+        Y: 437741856
       - X: 77387088
-        Y: -233680304
+        Y: -10677185
       - X: 735077760
-        Y: -233680304
+        Y: -10677185
   - m_Collider: {fileID: 552412542}
     m_ColliderPaths:
     - - X: 138501696
-        Y: 102975528
-      - X: -143259008
-        Y: 102975528
-      - X: -143259008
-        Y: -13861237
+        Y: 434170624
+      - X: -182960320
+        Y: 434170624
+      - X: -182960320
+        Y: -68767320
       - X: 138501696
-        Y: -13861237
+        Y: -68767320
   m_CompositePaths:
     m_Paths:
-    - - {x: 73.507744, y: -23.36803}
-      - {x: 73.507744, y: 11.536156}
-      - {x: 7.738709, y: 11.536126}
-      - {x: 7.7386794, y: 10.297553}
-      - {x: -14.325901, y: 10.2975235}
-      - {x: -14.325872, y: -1.3861237}
-      - {x: 7.738709, y: -1.3861531}
-      - {x: 7.7387385, y: -23.36803}
+    - - {x: 13.850141, y: -6.876732}
+      - {x: 13.850199, y: -1.0677185}
+      - {x: 73.507774, y: -1.0676892}
+      - {x: 73.507744, y: 43.774185}
+      - {x: 7.738709, y: 43.77416}
+      - {x: 7.7386794, y: 43.417065}
+      - {x: -18.296032, y: 43.417034}
+      - {x: -18.296003, y: -6.876732}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -12863,7 +12863,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 1
   m_CompositeOrder: 0
-  m_Offset: {x: 40.62324, y: -5.9159374}
+  m_Offset: {x: 40.62324, y: 21.353233}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -12873,7 +12873,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 65.769066, y: 34.904186}
+  m_Size: {x: 65.769066, y: 44.841904}
   m_EdgeRadius: 0
 --- !u!61 &552412542
 BoxCollider2D:
@@ -12909,7 +12909,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 1
   m_CompositeOrder: 0
-  m_Offset: {x: -0.23786545, y: 4.4557147}
+  m_Offset: {x: -2.222931, y: 18.270164}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -12919,7 +12919,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 28.176071, y: 11.683677}
+  m_Size: {x: 32.146202, y: 50.293793}
   m_EdgeRadius: 0
 --- !u!61 &552412543
 BoxCollider2D:
@@ -12955,7 +12955,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 80.87657, y: -11.434041}
+  m_Offset: {x: 83.14186, y: 35.60606}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -12965,7 +12965,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 15.195488, y: 23.868082}
+  m_Size: {x: 19.726074, y: 16.733194}
   m_EdgeRadius: 0
 --- !u!50 &552412544
 Rigidbody2D:
@@ -57497,6 +57497,59 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1485898547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1485898549}
+  - component: {fileID: 1485898548}
+  m_Layer: 0
+  m_Name: SaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1485898548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485898547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdad08c0768022f4f86b6e776a336d20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SaveManager
+  data:
+    levels:
+    - levelId: Scene1
+      isUnlocked: 1
+      isCompleted: 0
+      collectedGemIds: 
+    hasSeenIntroCutscene: 0
+    lastScene: 
+    returnScene: 
+--- !u!4 &1485898549
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485898547}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 70.09898, y: -10.21135, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1489035558
 GameObject:
   m_ObjectHideFlags: 0
@@ -63918,3 +63971,4 @@ SceneRoots:
   - {fileID: 1744488155}
   - {fileID: 696369812}
   - {fileID: 1177229933}
+  - {fileID: 1485898549}

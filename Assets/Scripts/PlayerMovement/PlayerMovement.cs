@@ -56,8 +56,6 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private PlayerMovementStates playerMovementStates;
 
-    [Header("Audio")]
-    [SerializeField] private AudioManager audioManager;
     void Start()
     {     
         controller = GetComponent<Controller2D>();
@@ -413,12 +411,13 @@ public class PlayerMovement : MonoBehaviour
     }
     void UpdateRunningAudio()
     {
-        if (audioManager == null) return;
+        if (AudioManager.Instance == null) return;
+
         bool isRunning = controller.collsionInfo.below && !_isDashing && Mathf.Abs(_velocity.x) > 0.1f;
 
         if (isRunning)
-            audioManager.PlayLoop(audioManager.running);
+            AudioManager.Instance.PlayLoop(AudioManager.Instance.running);
         else
-            audioManager.StopLoop();
+            AudioManager.Instance.StopLoop();
     }
 }

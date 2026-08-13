@@ -111,4 +111,9 @@ public class SaveManager : MonoBehaviour
         data.returnScene = sceneName;
         Save();
     }
+    public void StartNewGame()
+    {
+        data = new SaveData();
+        Save();
+    }
 }
