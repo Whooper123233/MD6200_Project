@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    public static AudioManager Instance;
+
     [Header("Audio Sources")]
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
@@ -10,6 +12,19 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Clips")]
     public AudioClip running;
     public AudioClip backGround;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
@@ -33,5 +48,10 @@ public class AudioManager : MonoBehaviour
     public void StopLoop()
     {
         if (loopSource.isPlaying) loopSource.Stop();
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        musicSource.volume = volume;
     }
 }

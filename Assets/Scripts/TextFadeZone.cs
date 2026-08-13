@@ -21,18 +21,15 @@ public class TextFadeZone : MonoBehaviour
         if (!other.CompareTag("Player")) return;
         StartFade(0f);
     }
-
     private void StartFade(float targetAlpha)
     {
         if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);
         fadeCoroutine = StartCoroutine(FadeRoutine(targetAlpha));
     }
-
     private IEnumerator FadeRoutine(float targetAlpha)
     {
         float startAlpha = targetText.color.a;
         float elapsed = 0f;
-
         while (elapsed < fadeDuration)
         {
             elapsed += Time.deltaTime;
@@ -41,10 +38,8 @@ public class TextFadeZone : MonoBehaviour
             SetAlpha(alpha);
             yield return null;
         }
-
         SetAlpha(targetAlpha);
     }
-
     private void SetAlpha(float alpha)
     {
         Color c = targetText.color;

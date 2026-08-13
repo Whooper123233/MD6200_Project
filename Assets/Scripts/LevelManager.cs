@@ -9,8 +9,10 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance;
     [SerializeField] private GameObject loaderCanvas;
     [SerializeField] private Image progressBar;
-    [SerializeField] private float minLoadTime = 1.5f;   
-    [SerializeField] private float fillSpeed = 3f;         
+    [SerializeField] private float minLoadTime = 1.5f;
+    [SerializeField] private float fillSpeed = 3f;
+
+    [HideInInspector] public bool skipRequested;
 
     void Awake()
     {
@@ -21,12 +23,13 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject); 
+            Destroy(gameObject);
         }
     }
 
     public void LoadScene(string sceneName)
     {
+        skipRequested = false;
         StartCoroutine(LoadSceneRoutine(sceneName));
     }
 
@@ -34,7 +37,6 @@ public class LevelManager : MonoBehaviour
     {
         loaderCanvas.SetActive(true);
         progressBar.fillAmount = 0f;
-
         float elapsed = 0f;
         float displayedProgress = 0f;
 
@@ -43,26 +45,36 @@ public class LevelManager : MonoBehaviour
 
         while (elapsed < minLoadTime || scene.progress < 0.9f)
         {
-            elapsed += Time.deltaTime;
+            if (skipRequested) break;
 
+            elapsed += Time.deltaTime;
             float targetProgress = Mathf.Clamp01(scene.progress / 0.9f);
             displayedProgress = Mathf.MoveTowards(displayedProgress, targetProgress, fillSpeed * Time.deltaTime);
             progressBar.fillAmount = displayedProgress;
-
             yield return null;
         }
 
-        while (displayedProgress < 1f)
+        if (!skipRequested)
         {
-            displayedProgress = Mathf.MoveTowards(displayedProgress, 1f, fillSpeed * Time.deltaTime);
-            progressBar.fillAmount = displayedProgress;
+            while (displayedProgress < 1f)
+            {
+                if (skipRequested) break;
+
+                displayedProgress = Mathf.MoveTowards(displayedProgress, 1f, fillSpeed * Time.deltaTime);
+                progressBar.fillAmount = displayedProgress;
+                yield return null;
+            }
+        }
+
+        progressBar.fillAmount = 1f;
+
+        while (scene.progress < 0.9f)
+        {
             yield return null;
         }
 
         scene.allowSceneActivation = true;
-
         yield return null;
-
         loaderCanvas.SetActive(false);
     }
 }
