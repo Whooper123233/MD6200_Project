@@ -13,6 +13,6 @@ public class FireFlyUI : MonoBehaviour
     public void UpdateUI()
     {
         int count = GameManager.Instance.playerData.Fireflies;
-        fireflyText.text = "Fireflies: " + count;
+        fireflyText.text = "GEMS: " + count;
     }
 }
