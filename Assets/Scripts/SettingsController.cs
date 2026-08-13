@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class SettingsController : MonoBehaviour
 {
-    public GameObject menuCanvas;
+    public GameObject OptionsCanvas;
     void Start()
     {
-        menuCanvas.SetActive(false);
+        OptionsCanvas.SetActive(false);
     }
 
     // Update is called once per frame
@@ -13,7 +13,7 @@ public class SettingsController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            menuCanvas.SetActive(!menuCanvas.activeSelf);
+            OptionsCanvas.SetActive(!OptionsCanvas.activeSelf);
         }
     }
 }

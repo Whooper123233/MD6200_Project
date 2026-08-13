@@ -63776,13 +63776,17 @@ PrefabInstance:
       propertyPath: menuCanvas
       value: 
       objectReference: {fileID: 2288196}
+    - target: {fileID: 2545300854621869842, guid: 7a9614f3d8ed28646b487f17e959f6be, type: 3}
+      propertyPath: OptionsCanvas
+      value: 
+      objectReference: {fileID: 2288196}
     - target: {fileID: 4304933117218073538, guid: 7a9614f3d8ed28646b487f17e959f6be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -78.55095
+      value: -78.55097
       objectReference: {fileID: 0}
     - target: {fileID: 4304933117218073538, guid: 7a9614f3d8ed28646b487f17e959f6be, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25.98457
+      value: 23.677675
       objectReference: {fileID: 0}
     - target: {fileID: 4304933117218073538, guid: 7a9614f3d8ed28646b487f17e959f6be, type: 3}
       propertyPath: m_LocalPosition.z
