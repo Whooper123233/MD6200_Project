@@ -12060,6 +12060,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &754632247 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 468842437026427152, guid: fadeb01b8b242c3418f73511c5a76fdc, type: 3}
+  m_PrefabInstance: {fileID: 1801098734}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &771867184
 GameObject:
   m_ObjectHideFlags: 0
@@ -53386,7 +53397,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.6686096, y: -2.0801296}
+  m_Offset: {x: 1.9656963, y: -0.7212763}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -53396,7 +53407,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.5200348, y: 5.1602592}
+  m_Size: {x: 5.8436623, y: 7.877966}
   m_EdgeRadius: 0
 --- !u!1 &1452621162
 GameObject:
@@ -55161,6 +55172,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1713236734 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9112266497999957744, guid: fadeb01b8b242c3418f73511c5a76fdc, type: 3}
+  m_PrefabInstance: {fileID: 1801098734}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1715749591
 GameObject:
   m_ObjectHideFlags: 0
@@ -55362,8 +55378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e03bca96ed5c3a4ea8db92d362bf1b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
-  loaderCanvas: {fileID: 0}
-  progressBar: {fileID: 0}
+  loaderCanvas: {fileID: 1713236734}
+  progressBar: {fileID: 754632247}
   minLoadTime: 1.5
   fillSpeed: 3
 --- !u!1 &1736681622
@@ -56092,7 +56108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1938469363
 Transform:
   m_ObjectHideFlags: 0
@@ -56220,21 +56236,7 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1938469366}
-    m_ColliderPaths:
-    - - X: 700000000
-        Y: -410000000
-      - X: 670000000
-        Y: -410000000
-      - X: 670000000
-        Y: -420000000
-      - X: 660000000
-        Y: -420000000
-      - X: 660000000
-        Y: -450000000
-      - X: 700000000
-        Y: -450000000
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 69.99997, y: -45}
