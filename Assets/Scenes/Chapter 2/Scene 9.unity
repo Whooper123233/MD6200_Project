@@ -54452,7 +54452,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: eb6d3ff494ab6704d82e8eb81b7e4351, type: 2}
     - target: {fileID: 4329368360961423373, guid: 4f7c79e040fb6274398df30e27b661e7, type: 3}
       propertyPath: sceneName
-      value: Scene 9
+      value: Scene 10
       objectReference: {fileID: 0}
     - target: {fileID: 4329368360961423373, guid: 4f7c79e040fb6274398df30e27b661e7, type: 3}
       propertyPath: currentLevel
@@ -56526,6 +56526,59 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1931989333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1931989335}
+  - component: {fileID: 1931989334}
+  m_Layer: 0
+  m_Name: SaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1931989334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931989333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdad08c0768022f4f86b6e776a336d20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SaveManager
+  data:
+    levels:
+    - levelId: Scene1
+      isUnlocked: 1
+      isCompleted: 0
+      collectedGemIds: 
+    hasSeenIntroCutscene: 0
+    lastScene: 
+    returnScene: 
+--- !u!4 &1931989335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931989333}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 70.09898, y: -10.21135, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1938607366
 GameObject:
   m_ObjectHideFlags: 0
@@ -58279,3 +58332,4 @@ SceneRoots:
   - {fileID: 1938607367}
   - {fileID: 1183599915}
   - {fileID: 1324891807}
+  - {fileID: 1931989335}

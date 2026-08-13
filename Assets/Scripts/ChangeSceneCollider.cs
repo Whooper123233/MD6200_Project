@@ -17,7 +17,8 @@ public class ChangeSceneCollider : MonoBehaviour
             SaveManager.Instance.UnlockLevel(nextLevel.levelId);
         }
 
-        LevelManager.Instance.LoadScene(sceneName); 
+        SaveManager.Instance.SetLastScene(sceneName); 
+        LevelManager.Instance.LoadScene(sceneName);
     }
 
     public void ChangeScene(string targetScene) 

@@ -20,7 +20,8 @@ public class activationScript : MonoBehaviour
 
     private void OnCutsceneFinished(PlayableDirector director)
     {
-        playableDirector.stopped -= OnCutsceneFinished; 
+        playableDirector.stopped -= OnCutsceneFinished;
+        SaveManager.Instance.SetIntroCutsceneSeen();
         LevelManager.Instance.LoadScene(sceneName);
     }
 }
