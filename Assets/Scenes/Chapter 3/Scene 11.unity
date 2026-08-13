@@ -55913,6 +55913,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2545300854621869842, guid: 7a9614f3d8ed28646b487f17e959f6be, type: 3}
+      propertyPath: menuCanvas
+      value: 
+      objectReference: {fileID: 1809958101}
     - target: {fileID: 4304933117218073538, guid: 7a9614f3d8ed28646b487f17e959f6be, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.367672
@@ -57578,6 +57582,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &1809958101 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4974155030601925810, guid: fadeb01b8b242c3418f73511c5a76fdc, type: 3}
+  m_PrefabInstance: {fileID: 1809958097}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1823286710
 GameObject:
   m_ObjectHideFlags: 0
