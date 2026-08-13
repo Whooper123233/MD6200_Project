@@ -12775,6 +12775,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9112266497999957744, guid: fadeb01b8b242c3418f73511c5a76fdc, type: 3}
   m_PrefabInstance: {fileID: 969944499}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &969944502 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4974155030601925810, guid: fadeb01b8b242c3418f73511c5a76fdc, type: 3}
+  m_PrefabInstance: {fileID: 969944499}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &997921732 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4717112109986111704, guid: 8f464d6270b34c945b9cd90fb46214cd, type: 3}
@@ -13369,7 +13374,11 @@ PrefabInstance:
     - target: {fileID: 2545300854621869842, guid: 7a9614f3d8ed28646b487f17e959f6be, type: 3}
       propertyPath: menuCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 969944502}
+    - target: {fileID: 2545300854621869842, guid: 7a9614f3d8ed28646b487f17e959f6be, type: 3}
+      propertyPath: OptionsCanvas
+      value: 
+      objectReference: {fileID: 969944502}
     - target: {fileID: 4304933117218073538, guid: 7a9614f3d8ed28646b487f17e959f6be, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.608629
