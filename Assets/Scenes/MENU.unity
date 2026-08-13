@@ -3748,11 +3748,11 @@ PrefabInstance:
     - target: {fileID: 4091367441703678078, guid: 4f7c79e040fb6274398df30e27b661e7, type: 3}
       propertyPath: progressBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1288966206}
     - target: {fileID: 4091367441703678078, guid: 4f7c79e040fb6274398df30e27b661e7, type: 3}
       propertyPath: loaderCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1261974323}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5140,6 +5140,11 @@ RectTransform:
   m_AnchoredPosition: {x: -367, y: -397}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1261974323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9112266497999957744, guid: fadeb01b8b242c3418f73511c5a76fdc, type: 3}
+  m_PrefabInstance: {fileID: 818785040}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1270994965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5197,6 +5202,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 899bf1ff81567fb41b68c4d65776126b, type: 3}
+--- !u!114 &1288966206 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 468842437026427152, guid: fadeb01b8b242c3418f73511c5a76fdc, type: 3}
+  m_PrefabInstance: {fileID: 818785040}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &1311799087
 GameObject:
   m_ObjectHideFlags: 0
