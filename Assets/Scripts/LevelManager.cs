@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private float fillSpeed = 3f;
 
     [HideInInspector] public bool skipRequested;
+    private bool isLoading;
 
     void Awake()
     {
@@ -29,12 +30,14 @@ public class LevelManager : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
+        if (isLoading) return; 
         skipRequested = false;
         StartCoroutine(LoadSceneRoutine(sceneName));
     }
 
     private IEnumerator LoadSceneRoutine(string sceneName)
     {
+        isLoading = true;
         loaderCanvas.SetActive(true);
         progressBar.fillAmount = 0f;
         float elapsed = 0f;
@@ -76,5 +79,7 @@ public class LevelManager : MonoBehaviour
         scene.allowSceneActivation = true;
         yield return null;
         loaderCanvas.SetActive(false);
+        isLoading = false;
+
     }
 }

@@ -228,7 +228,7 @@ public class Controller2D : RaycastController
         RaycastHit2D hazardHit = Physics2D.Raycast(origin, direction, length, hazardMask);
         if (hazardHit)
         {
-            Debug.Log("Hit spike!");
+            
             if (respawnPoint != null)
             {
                 transform.position = respawnPoint.position;
