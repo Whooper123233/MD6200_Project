@@ -18,7 +18,7 @@ public class SaveData
     public List<LevelSaveData> levels = new List<LevelSaveData>();
     public bool hasSeenIntroCutscene;
     public string lastScene;
-    public string returnScene; // where to go back to after visiting the options/menu screen
+    public string returnScene;
 }
 
 public class SaveManager : MonoBehaviour

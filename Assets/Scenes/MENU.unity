@@ -12638,7 +12638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartMenuController
   cutsceneSceneName: StartScene
-  firstLevelSceneName: Scene 1
+  firstLevelSceneName: Tutorial Level
 --- !u!114 &1570858322
 MonoBehaviour:
   m_ObjectHideFlags: 0
