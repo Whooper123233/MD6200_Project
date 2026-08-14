@@ -409,6 +409,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4974155030601925810, guid: fadeb01b8b242c3418f73511c5a76fdc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8007,7 +8011,7 @@ Transform:
   m_GameObject: {fileID: 290445449}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16, y: 28.8, z: 8.6}
+  m_LocalPosition: {x: 21, y: 50.7, z: 8.6}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -57559,6 +57563,7 @@ MonoBehaviour:
     hasSeenIntroCutscene: 0
     lastScene: 
     returnScene: 
+    hasCompletedGame: 0
 --- !u!4 &1485898549
 Transform:
   m_ObjectHideFlags: 0
