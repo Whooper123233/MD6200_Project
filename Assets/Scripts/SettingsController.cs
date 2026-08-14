@@ -8,12 +8,26 @@ public class SettingsController : MonoBehaviour
         OptionsCanvas.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            OptionsCanvas.SetActive(!OptionsCanvas.activeSelf);
+            if (OptionsCanvas.activeSelf)
+                CloseOptions();
+            else
+                OpenOptions();
         }
+    }
+
+    public void OpenOptions()
+    {
+        OptionsCanvas.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void CloseOptions() 
+    {
+        OptionsCanvas.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
