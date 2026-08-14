@@ -2622,7 +2622,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4726411947283481702
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3747,8 +3747,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: BACK
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e7b9c08f62e536446a1e29fec91edfce, type: 2}
-  m_sharedMaterial: {fileID: 5025177386664797945, guid: e7b9c08f62e536446a1e29fec91edfce, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 80e9e33f2794d7f40ae26d4cc6e79f27, type: 2}
+  m_sharedMaterial: {fileID: 1820104471623403365, guid: 80e9e33f2794d7f40ae26d4cc6e79f27, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3811,7 +3811,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.5128174, y: 0, z: -0.37042236, w: 0}
+  m_margin: {x: 61.878418, y: 0, z: 60.99524, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4304,7 +4304,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -384, y: 296}
+  m_AnchoredPosition: {x: -109, y: 296}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &440206403021358370
@@ -4337,8 +4337,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: KEYBOARD CONTROLS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e7b9c08f62e536446a1e29fec91edfce, type: 2}
-  m_sharedMaterial: {fileID: 5025177386664797945, guid: e7b9c08f62e536446a1e29fec91edfce, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 80e9e33f2794d7f40ae26d4cc6e79f27, type: 2}
+  m_sharedMaterial: {fileID: 1820104471623403365, guid: 80e9e33f2794d7f40ae26d4cc6e79f27, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4401,10 +4401,10 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -117.92276, y: -6.1350956, z: -539.8421, w: 0}
+  m_margin: {x: -117.92276, y: -6.1350956, z: -260.70337, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &6264767633156710063
@@ -4734,8 +4734,8 @@ MonoBehaviour:
 
     L BTN: SWING'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e7b9c08f62e536446a1e29fec91edfce, type: 2}
-  m_sharedMaterial: {fileID: 5025177386664797945, guid: e7b9c08f62e536446a1e29fec91edfce, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 80e9e33f2794d7f40ae26d4cc6e79f27, type: 2}
+  m_sharedMaterial: {fileID: 1820104471623403365, guid: 80e9e33f2794d7f40ae26d4cc6e79f27, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4801,7 +4801,7 @@ MonoBehaviour:
   m_margin: {x: -117.92276, y: -6.1350956, z: -539.8421, w: -110.07594}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &7445342454297326072
