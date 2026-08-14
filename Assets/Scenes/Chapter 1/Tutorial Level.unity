@@ -834,6 +834,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1634633421}
   m_SourcePrefab: {fileID: 100100000, guid: 7a9614f3d8ed28646b487f17e959f6be, type: 3}
+--- !u!114 &354099460 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2545300854621869842, guid: 7a9614f3d8ed28646b487f17e959f6be, type: 3}
+  m_PrefabInstance: {fileID: 354099459}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6ca8853d0aeb0448ceda642011f4df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &360694973
 GameObject:
   m_ObjectHideFlags: 0
@@ -39837,6 +39848,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1161917359705557248, guid: fadeb01b8b242c3418f73511c5a76fdc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1161917359705557248, guid: fadeb01b8b242c3418f73511c5a76fdc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 354099460}
+    - target: {fileID: 1161917359705557248, guid: fadeb01b8b242c3418f73511c5a76fdc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CloseOptions
+      objectReference: {fileID: 0}
+    - target: {fileID: 1161917359705557248, guid: fadeb01b8b242c3418f73511c5a76fdc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SettingsController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3661344241753467863, guid: fadeb01b8b242c3418f73511c5a76fdc, type: 3}
       propertyPath: m_Pivot.x
       value: 0
