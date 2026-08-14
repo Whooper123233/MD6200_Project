@@ -12768,6 +12768,18 @@ PrefabInstance:
       propertyPath: loaderCanvas
       value: 
       objectReference: {fileID: 763716353}
+    - target: {fileID: 4329368360961423373, guid: 4f7c79e040fb6274398df30e27b661e7, type: 3}
+      propertyPath: nextLevel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329368360961423373, guid: 4f7c79e040fb6274398df30e27b661e7, type: 3}
+      propertyPath: sceneName
+      value: ENDCREDIT
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329368360961423373, guid: 4f7c79e040fb6274398df30e27b661e7, type: 3}
+      propertyPath: currentLevel
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f8ca99691e2e5949ae5f361cc42abf4, type: 2}
     - target: {fileID: 6462103966631693437, guid: 4f7c79e040fb6274398df30e27b661e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 40.28

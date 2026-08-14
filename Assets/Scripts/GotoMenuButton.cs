@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GotoMenuButton : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class GotoMenuButton : MonoBehaviour
 
     public void GoToMenu()
     {
+        Time.timeScale = 1f;
+        SaveManager.Instance.SetReturnScene(SceneManager.GetActiveScene().name);
         LevelManager.Instance.LoadScene(menuSceneName);
     }
 }

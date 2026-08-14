@@ -19,6 +19,7 @@ public class SaveData
     public bool hasSeenIntroCutscene;
     public string lastScene;
     public string returnScene;
+    public bool hasCompletedGame;
 }
 
 public class SaveManager : MonoBehaviour
@@ -114,6 +115,11 @@ public class SaveManager : MonoBehaviour
     public void StartNewGame()
     {
         data = new SaveData();
+        Save();
+    }
+    public void SetGameCompleted()
+    {
+        data.hasCompletedGame = true;
         Save();
     }
 }

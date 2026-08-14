@@ -10,16 +10,12 @@ public class LevelSelectButton : MonoBehaviour
     private void Start()
     {
         var saveEntry = SaveManager.Instance.GetLevelData(levelData.levelId);
-        bool unlocked = saveEntry.isUnlocked || levelData.unlockRequirement == null;
+        bool unlocked = saveEntry.isUnlocked || levelData.unlockRequirement == null || SaveManager.Instance.data.hasCompletedGame; 
 
         lockedOverlay.SetActive(!unlocked);
         button.interactable = unlocked;
 
         int collected = saveEntry.collectedGemIds.Count;
-
-        button.onClick.AddListener(() =>
-        {
-            LevelManager.Instance.LoadScene(levelData.sceneName);
-        });
+        button.onClick.AddListener(() =>{LevelManager.Instance.LoadScene(levelData.sceneName);});
     }
 }
